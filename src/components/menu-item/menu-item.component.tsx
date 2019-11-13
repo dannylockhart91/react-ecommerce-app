@@ -9,7 +9,7 @@ interface MenuItemProps extends RouteComponentProps {
     linkUrl: string
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({ title, imageUrl, size, linkUrl, history, match }: MenuItemProps) => (
+const MenuItem: React.FC<MenuItemProps> = ({ title, imageUrl, size, linkUrl, history, match }) => (
     <div className={`menu-item ${size}`} onClick={() => history.push(`${match.url}${linkUrl}`)}>
         <div style={{
             backgroundImage: `url(${imageUrl})`
