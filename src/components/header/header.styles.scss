@@ -1,13 +1,15 @@
 .header-container {
     height: 70px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
-    padding: 10px 1rem;
+    box-shadow: -10px 0 10px 5px #444;
 
     .logo-container {
         display: flex;
         align-items: center;
+        padding-left: 1rem;
     }
 
     .header-links {

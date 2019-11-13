@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/crown.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header.styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/custom-button/custom-button.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/custom-button/custom-button.styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form-input/form-input.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form-input/form-input.styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sign-in/sign-in.styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/authentication/authentication.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/authentication/authentication.styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu-item/menu-item.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu-item/menu-item.styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/homepage/homepage.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/homepage.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/homepage/homepage.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/homepage.styles.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573640726012</updated>
-      <workItem from="1573640727917" duration="16522000" />
+      <workItem from="1573640727917" duration="22351000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
@@ -106,17 +115,18 @@
       <option name="project" value="LOCAL" />
       <updated>1573658554816</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- Added Header to application&#10;- Imported SVG for header logo&#10;- Moved body styling into app.scss instead of index.scss">
+      <created>1573659871876</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573659871876</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/src/index.d.ts" />
-        <option value="$PROJECT_DIR$/src/index.d.ts" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -135,6 +145,7 @@
     <MESSAGE value="- Separated components from pages and implemented folder structure&#10;- Finished up homepage&#10;- Added images and styling to menu-items via props input&#10;- Added 'Open Sans Condensed' font as font-family" />
     <MESSAGE value="- Added React Router&#10;- Implemented binding of route parameters using RouterComponentProps inside of React Functional Component by exporting withRouter(componentName)" />
     <MESSAGE value="- Added new Shop page and 2 new components 'collection-preview' and 'collection-item'&#10;- Added relevant styles for each new component&#10;- Styles the site scroll-bar&#10;- Changed functional components to cast into interfaces,&#10;E.G&#10;React.FC&lt;MyInterface&gt; = ({....})&#10;instead of&#10;React.FC = ({....}: MyInterface)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added new Shop page and 2 new components 'collection-preview' and 'collection-item'&#10;- Added relevant styles for each new component&#10;- Styles the site scroll-bar&#10;- Changed functional components to cast into interfaces,&#10;E.G&#10;React.FC&lt;MyInterface&gt; = ({....})&#10;instead of&#10;React.FC = ({....}: MyInterface)" />
+    <MESSAGE value="- Added Header to application&#10;- Imported SVG for header logo&#10;- Moved body styling into app.scss instead of index.scss" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added Header to application&#10;- Imported SVG for header logo&#10;- Moved body styling into app.scss instead of index.scss" />
   </component>
 </project>

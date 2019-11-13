@@ -58,3 +58,9 @@
         }
     }
 }
+
+@media screen and(max-width: 599px) {
+    .menu-item {
+        min-width: 125px;
+    }
+}

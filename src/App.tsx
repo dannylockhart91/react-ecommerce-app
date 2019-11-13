@@ -3,17 +3,21 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Header from "./components/header/header.component";
-import HomePage from "./pages/homepage/homepage.component";
+import Authentication from "./pages/authentication/authentication.component";
+import HomePage from "./pages/home/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
 
 const App: React.FC = () => {
     return (
         <div>
             <Header/>
-            <Switch>
-                <Route exact path='/' component={HomePage}/>
-                <Route exact path='/shop' component={ShopPage}/>
-            </Switch>
+            <div className='page-container'>
+                <Switch>
+                    <Route exact path='/' component={HomePage}/>
+                    <Route exact path='/shop' component={ShopPage}/>
+                    <Route exact path='/auth' component={Authentication}/>
+                </Switch>
+            </div>
         </div>
     );
 };
