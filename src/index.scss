@@ -7,11 +7,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -19,12 +14,12 @@ code {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #999;
+    background: #fff;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #222;
+    background: #777;
 }
 
 /* Handle on hover */

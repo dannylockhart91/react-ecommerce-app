@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/collection-item/collection-item.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/collection-item/component.item.styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/collection-preview/collection-preview.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/collection-preview/collection-preview.styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/shop/shop.data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/crown.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header/header.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/header/header.styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu-item/menu-item.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu-item/menu-item.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/homepage/homepage.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/homepage/homepage.component.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +24,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -79,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573640726012</updated>
-      <workItem from="1573640727917" duration="15124000" />
+      <workItem from="1573640727917" duration="16522000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
@@ -102,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573652601481</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- Added new Shop page and 2 new components 'collection-preview' and 'collection-item'&#10;- Added relevant styles for each new component&#10;- Styles the site scroll-bar&#10;- Changed functional components to cast into interfaces,&#10;E.G&#10;React.FC&lt;MyInterface&gt; = ({....})&#10;instead of&#10;React.FC = ({....}: MyInterface)">
+      <created>1573658554816</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573658554816</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,9 +130,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure" />
     <MESSAGE value="- Separated components from pages and implemented folder structure&#10;- Finished up homepage&#10;- Added images and styling to menu-items via props input&#10;- Added 'Open Sans Condensed' font as font-family" />
     <MESSAGE value="- Added React Router&#10;- Implemented binding of route parameters using RouterComponentProps inside of React Functional Component by exporting withRouter(componentName)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added React Router&#10;- Implemented binding of route parameters using RouterComponentProps inside of React Functional Component by exporting withRouter(componentName)" />
+    <MESSAGE value="- Added new Shop page and 2 new components 'collection-preview' and 'collection-item'&#10;- Added relevant styles for each new component&#10;- Styles the site scroll-bar&#10;- Changed functional components to cast into interfaces,&#10;E.G&#10;React.FC&lt;MyInterface&gt; = ({....})&#10;instead of&#10;React.FC = ({....}: MyInterface)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added new Shop page and 2 new components 'collection-preview' and 'collection-item'&#10;- Added relevant styles for each new component&#10;- Styles the site scroll-bar&#10;- Changed functional components to cast into interfaces,&#10;E.G&#10;React.FC&lt;MyInterface&gt; = ({....})&#10;instead of&#10;React.FC = ({....}: MyInterface)" />
   </component>
 </project>

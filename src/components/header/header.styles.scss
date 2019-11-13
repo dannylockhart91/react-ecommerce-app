@@ -1,0 +1,24 @@
+.header-container {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding: 10px 1rem;
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-links {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .link {
+            padding: 10px 15px;
+        }
+    }
+}
