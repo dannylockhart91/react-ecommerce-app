@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="" />
+    <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/store/root-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/user/user-actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/user/user-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +80,8 @@
       <option name="presentableId" value="Default" />
       <updated>1573640726012</updated>
       <workItem from="1573640727917" duration="28057000" />
-      <workItem from="1573726002058" duration="8642000" />
+      <workItem from="1573726002058" duration="12770000" />
+      <workItem from="1573741829677" duration="4251000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
@@ -127,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573737052220</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="- Finished adding sign-in handleSubmit method so authentication can be done via email/password of already registered user">
+      <created>1573737366398</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573737366398</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +175,7 @@
     <MESSAGE value="- Added Authentication page and create several components:&#10;    - sign-in&#10;    - form-input&#10;    - custom-button&#10;- Fixed some styling issues and added box-sizing: border-box globally" />
     <MESSAGE value="- Integrated firebase into application and enabled sign-in with google accounts&#10;- Created custom button with new props to take in handleClick and buttonType.&#10;- Added ternary operator to conditionally load sign-in / sign-out links to header based on currentUser prop" />
     <MESSAGE value="- Added sign-up form component to authentication page, app now accepts email/password registration&#10;- Corrected 'FormInput' component to utilise type props" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added sign-up form component to authentication page, app now accepts email/password registration&#10;- Corrected 'FormInput' component to utilise type props" />
+    <MESSAGE value="- Finished adding sign-in handleSubmit method so authentication can be done via email/password of already registered user" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Finished adding sign-in handleSubmit method so authentication can be done via email/password of already registered user" />
   </component>
 </project>
