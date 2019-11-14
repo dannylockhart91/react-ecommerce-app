@@ -2,7 +2,7 @@ import React from "react";
 
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
-import { signInWithGoogle } from '../../shared/config/firebase.utils';
+import { auth, signInWithGoogle } from '../../shared/config/firebase.utils';
 import './sign-in.styles.scss';
 
 interface SignInProps {
@@ -28,10 +28,16 @@ class SignInComponent extends React.Component<SignInProps, SignInState> {
         this.setState({ [name]: value } as Pick<SignInState, keyof SignInState>);
     };
 
-    handleSubmit = (e: any) => {
+    handleSubmit = async (e: any) => {
         e.preventDefault();
+        const { email, password } = this.state;
 
-        this.setState({ email: '', password: '' });
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+            this.setState({ email: '', password: '' });
+        } catch (e) {
+            console.log('Error occurred during sign in', e.message);
+        }
     };
 
     render() {
