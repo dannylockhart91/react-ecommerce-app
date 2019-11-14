@@ -1,11 +1,11 @@
 .sign-in-container {
     padding: 10px;
-    width: 30vw;
+    width: 400px;
     display: flex;
     flex-direction: column;
 
     .button-container {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
     }
 }

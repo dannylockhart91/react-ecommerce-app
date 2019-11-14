@@ -3,11 +3,14 @@ import React from "react";
 import './custom-button.styles.scss';
 
 interface CustomButtonProps {
-    type: any;
+    buttonType?: any;
+    handleClick?: any;
+    customClassName?: string
 }
 
 const CustomButton: React.FC<CustomButtonProps> = (props) => (
-    <button className='custom-button' type={props.type}>
+    <button className={`${props.customClassName ? props.customClassName : ''} custom-button`} type={props.buttonType}
+            onClick={props.handleClick}>
         {props.children}
     </button>
 );
