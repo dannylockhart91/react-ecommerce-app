@@ -15,6 +15,7 @@ const FormInput: React.FC<FormInputProps> = (props) => (
     <div className='group'>
         <input className='form-input'
                name={props.name}
+               type={props.type}
                value={props.value}
                onChange={props.handleChange}
                required={props.required}/>

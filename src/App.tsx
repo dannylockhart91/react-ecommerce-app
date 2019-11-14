@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.scss';
 
-import { auth } from "./shared/config/firebase.utils";
+import { auth, createUserProfileDocument } from "./shared/config/firebase.utils";
 
 import Header from "./components/header/header.component";
 
@@ -14,7 +14,6 @@ interface AppProps {
 }
 
 interface AppState {
-    isAuthenticated: boolean;
     currentUser: any
 }
 
@@ -24,19 +23,28 @@ class App extends React.Component<AppProps, AppState> {
     constructor(props: AppState) {
         super(props);
         this.state = {
-            isAuthenticated: false,
             currentUser: null
         };
     }
 
     componentDidMount(): void {
-        this.firebaseAuthListener$ = auth.onAuthStateChanged((user) => {
-            if (user) {
-                this.setState({ currentUser: user, isAuthenticated: true });
+        this.firebaseAuthListener$ = auth.onAuthStateChanged(async (userAuthObject: any) => {
+            if (userAuthObject) {
+                const userRef = await createUserProfileDocument(userAuthObject);
+                if (userRef) {
+                    userRef.onSnapshot((snapshot => {
+                        this.setState({
+                            currentUser: {
+                                id: snapshot.id,
+                                ...snapshot.data()
+                            }
+                        });
+                        console.log(this.state);
+                    }));
+                }
             } else {
-                this.setState({ currentUser: null, isAuthenticated: false });
+                this.setState({ currentUser: null });
             }
-            console.log(user);
         });
     }
 
