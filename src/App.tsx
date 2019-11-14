@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { setCurrentUser } from './store/user/user-actions';
@@ -13,6 +13,7 @@ import ShopPage from "./pages/shop/shop.component";
 import './App.scss';
 
 interface AppProps {
+    currentUser: any | null,
     setCurrentUser: any
 }
 
@@ -20,7 +21,7 @@ class App extends React.Component<AppProps> {
     firebaseAuthListener$: any = null;
 
     componentDidMount(): void {
-        const {setCurrentUser} = this.props;
+        const { setCurrentUser } = this.props;
 
         this.firebaseAuthListener$ = auth.onAuthStateChanged(async (userAuthObject: any) => {
             if (userAuthObject) {
@@ -51,7 +52,13 @@ class App extends React.Component<AppProps> {
                     <Switch>
                         <Route exact path='/' component={HomePage}/>
                         <Route exact path='/shop' component={ShopPage}/>
-                        <Route exact path='/auth' component={Authentication}/>
+                        <Route exact path='/auth'
+                               render={() => this.props.currentUser ? (
+                                   <Redirect to={'/'}/>
+                               ) : (
+                                   <Authentication/>
+                               )}
+                        />
                     </Switch>
                 </div>
             </div>
@@ -59,8 +66,12 @@ class App extends React.Component<AppProps> {
     }
 }
 
+const mapStateToProps = ({ user }: any) => ({
+    currentUser: user.currentUser
+});
+
 const mapDispatchToProps = (dispatch: any) => ({
     setCurrentUser: (user: any) => dispatch(setCurrentUser(user))
 });
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
