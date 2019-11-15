@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-
 import { AppState } from '../../store/root-reducer';
 
 import { auth } from '../../shared/config/firebase.utils';
@@ -41,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ currentUser, isHidden }) => (
 			)}
 			<CartIcon />
 		</div>
-		{!isHidden ? <CartDropdown /> : null}
+		{isHidden ? null : <CartDropdown />}
 	</div>
 );
 

@@ -2,10 +2,11 @@ import './collection-preview.styles.scss';
 import React from "react";
 
 import CollectionItem from "../collection-item/collection-item.component";
+import { Item } from '../../store/cart/cart.types';
 
 interface CollectionPreviewProps {
     title: string,
-    items: { id: number, name: string, imageUrl: string, price: number }[]
+    items: Item[]
 }
 
 const CollectionPreview = ({ title, items }: CollectionPreviewProps) => (
@@ -15,7 +16,7 @@ const CollectionPreview = ({ title, items }: CollectionPreviewProps) => (
             {
                 items.filter((item, index) => index < 4)
                     .map((item) => (
-                        <CollectionItem key={item.id} name={item.name} imageUrl={item.imageUrl} price={item.price}/>
+                        <CollectionItem key={item.id} item={item}/>
                     ))
             }
         </div>
