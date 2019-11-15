@@ -24,7 +24,7 @@ const CollectionItem: React.FC<CollectionItemProps> = (props) => {
 			/>
 			<div className='collection-item-footer'>
 				<span className='name'>{name}</span>
-				<span className='price'>{price}</span>
+				<span className='price'>£{price}</span>
 			</div>
 			<CustomButton
 				customClassName='custom-button'
