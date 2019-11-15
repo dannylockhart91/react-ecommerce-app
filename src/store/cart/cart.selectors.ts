@@ -19,3 +19,10 @@ export const getIsCartHidden = createSelector(
     [selectCartState],
     (state: CartState) => state.isHidden
 )
+
+export const getCartCostTotal = createSelector(
+    [getCartItems],
+    (cartItems: Item[]) => cartItems.reduce((total, item) => {
+        return item.quantity ? total + (item.price * item.quantity) : item.price
+    }, 0)
+)

@@ -13,6 +13,7 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { ReactComponent as Logo } from '../../assets/img/crown.svg';
 
 import './header.styles.scss';
+import { createStructuredSelector } from 'reselect';
 
 interface HeaderProps {
 	currentUser: any;
@@ -46,9 +47,13 @@ const Header: React.FC<HeaderProps> = ({ currentUser, isHidden }) => (
 	</div>
 );
 
-const mapStateToProps = (state: AppState) => ({
-	currentUser: getCurrentUser(state),
-	isHidden: getIsCartHidden(state)
+interface headerSelectors {
+	currentUser: any | null;
+	isHidden: boolean;
+}
+const mapStateToProps = createStructuredSelector<AppState, headerSelectors>({
+	currentUser: getCurrentUser,
+	isHidden: getIsCartHidden
 });
 
 export default connect(mapStateToProps)(Header);
