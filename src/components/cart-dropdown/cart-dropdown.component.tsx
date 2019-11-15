@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { AppState } from '../../store/root-reducer';
+import { getCartItems } from '../../store/cart/cart.selectors';
 import { Item } from '../../store/cart/cart.types';
 
 import CartItem from '../cart-item/cart-item.component';
@@ -13,7 +14,7 @@ interface CartDropdownProps {
 	cartItems: Item[];
 }
 
-const CartDropdown: React.FC<CartDropdownProps> = ({cartItems}) => (
+const CartDropdown: React.FC<CartDropdownProps> = ({ cartItems }) => (
 	<div className='cart-dropdown'>
 		<div className='cart-items'>
 			{cartItems.map((item: Item) => (
@@ -24,8 +25,8 @@ const CartDropdown: React.FC<CartDropdownProps> = ({cartItems}) => (
 	</div>
 );
 
-const mapStateToProps = ({ cart: { cartItems } }: AppState) => ({
-	cartItems
+const mapStateToProps = (state: AppState) => ({
+	cartItems: getCartItems(state)
 });
 
 export default connect(mapStateToProps)(CartDropdown);

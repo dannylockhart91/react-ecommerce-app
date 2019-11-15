@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+
+import { AppState } from '../../store/root-reducer';
 import { toggleShowCart } from '../../store/cart/cart-actions';
+import { getCartItemsCount } from '../../store/cart/cart.selectors';
 
 import { ReactComponent as ShoppingIcon } from '../../assets/img/shopping-bag.svg';
 
 import './cart-icon.styles.scss';
-import { AppState } from '../../store/root-reducer';
-import { Item } from '../../store/cart/cart.types';
 
 interface CartIconProps {
 	toggleShowCart: any;
@@ -24,15 +25,12 @@ const CartIcon: React.FC<CartIconProps> = ({
 	</div>
 );
 
-
 const mapDispatchToProps = (dispatch: any) => ({
 	toggleShowCart: () => dispatch(toggleShowCart())
 });
 
-const mapStateToProps = ({ cart: { cartItems } }: AppState) => ({
-	cartItemCount: cartItems.reduce((total, item) => {
-		return item.quantity ? total + item.quantity : 0;
-	}, 0)
+const mapStateToProps = (state: AppState) => ({
+	cartItemCount: getCartItemsCount(state)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);

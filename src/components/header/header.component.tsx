@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { AppState } from '../../store/root-reducer';
+import { getCurrentUser } from '../../store/user/user.selectors';
+import { getIsCartHidden } from '../../store/cart/cart.selectors';
 
 import { auth } from '../../shared/config/firebase.utils';
 import CartIcon from '../cart-icon/cart-icon.component';
@@ -44,12 +46,9 @@ const Header: React.FC<HeaderProps> = ({ currentUser, isHidden }) => (
 	</div>
 );
 
-const mapStateToProps = ({
-	user: { currentUser },
-	cart: { isHidden }
-}: AppState) => ({
-	currentUser,
-	isHidden
+const mapStateToProps = (state: AppState) => ({
+	currentUser: getCurrentUser(state),
+	isHidden: getIsCartHidden(state)
 });
 
 export default connect(mapStateToProps)(Header);
