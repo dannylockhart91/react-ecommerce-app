@@ -13,7 +13,9 @@ export interface Item {
 
 export enum CartActionTypes {
     TOGGLE_SHOW_CART = 'TOGGLE_SHOW_CART',
-    ADD_ITEM_TO_CART = 'ADD_ITEM_TO_CART'
+    ADD_ITEM_TO_CART = 'ADD_ITEM_TO_CART',
+    REMOVE_ITEM_FROM_CART = 'REMOVE_ITEM_FROM_CART',
+    CLEAR_ITEM_FROM_CART = 'CLEAR_ITEM_FROM_CART'
 }
 
 interface ToggleShowCart {
@@ -25,4 +27,14 @@ interface AddItemToCart {
     payload: Item
 }
 
-export type CartActions = ToggleShowCart | AddItemToCart
+interface RemoveItemFromCart {
+    type: typeof CartActionTypes.REMOVE_ITEM_FROM_CART,
+    payload: Item
+}
+
+interface ClearItemFromCart {
+    type: typeof CartActionTypes.CLEAR_ITEM_FROM_CART,
+    payload: Item
+}
+
+export type CartActions = ToggleShowCart | AddItemToCart | RemoveItemFromCart | ClearItemFromCart

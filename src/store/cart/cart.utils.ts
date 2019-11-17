@@ -23,3 +23,29 @@ export const addItemToCartItems = (cartItems: Item[], itemToAdd: Item): Item[] =
         }
     ]
 };
+
+/*
+Utility function called when removing items from the checkout page. Checks to see if the item quantity is 1
+at which point it will filter out the item. Otherwise it will map the item back and decrement the
+quantity by 1
+*/
+export const removeItemFromCartItems = (cartItems: Item[], itemToRemove: Item): Item[] => {
+    const itemToRemoveSearch = cartItems.find((item) => item.id === itemToRemove.id);
+
+    if (itemToRemoveSearch) {
+        if (itemToRemoveSearch.quantity === 1) {
+            return cartItems.filter((item: Item) => item.id !== itemToRemoveSearch.id)
+        } else {
+            return cartItems.map((item) => {
+                return item.id === itemToRemoveSearch.id ? {
+                    ...item,
+                    quantity: item.quantity ? item.quantity - 1 : 1
+                } : item
+            })
+        }
+    }
+
+    return {
+        ...cartItems
+    }
+}

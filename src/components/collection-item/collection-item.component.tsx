@@ -12,8 +12,8 @@ interface CollectionItemProps {
 	addItemToCart: any;
 }
 
-const CollectionItem: React.FC<CollectionItemProps> = (props) => {
-	const { imageUrl, name, price } = props.item;
+const CollectionItem: React.FC<CollectionItemProps> = ({item, addItemToCart}) => {
+	const { imageUrl, name, price } = item;
 	return (
 		<div className='collection-item'>
 			<div
@@ -29,7 +29,7 @@ const CollectionItem: React.FC<CollectionItemProps> = (props) => {
 			<CustomButton
 				customClassName='custom-button'
 				inverted
-				handleClick={() => props.addItemToCart(props.item)}>
+				handleClick={() => addItemToCart(item)}>
 				ADD TO CART
 			</CustomButton>
 		</div>
