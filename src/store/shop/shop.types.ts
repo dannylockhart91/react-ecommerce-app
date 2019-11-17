@@ -1,5 +1,5 @@
 export interface ShopState {
-    collections: ShopData[]
+    collections: { [key: string]: ShopData }
 }
 export interface ShopData {
     id: number,

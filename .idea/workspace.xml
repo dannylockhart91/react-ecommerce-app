@@ -3,17 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/collection-item/collection-item.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-item/collection-item.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/collection-item/component.item.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-item/component.item.styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/collection-preview/collection-preview.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-preview/collection-preview.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom-button/custom-button.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-button/custom-button.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom-button/custom-button.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-button/custom-button.styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form-input/form-input.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form-input/form-input.styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/cart/cart-actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart/cart-actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/cart/cart-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart/cart-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/cart/cart.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart/cart.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/shop/shop.selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/shop/shop.selectors.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,6 +78,7 @@
       <workItem from="1573741829677" duration="8129000" />
       <workItem from="1573807523992" duration="451000" />
       <workItem from="1573819030375" duration="164000" />
+      <workItem from="1573999882117" duration="646000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
