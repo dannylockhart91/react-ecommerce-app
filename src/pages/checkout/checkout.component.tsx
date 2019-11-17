@@ -7,6 +7,8 @@ import { getCartItems, getCartCostTotal } from '../../store/cart/cart.selectors'
 import { AppState } from '../../store/root-reducer';
 import { Item } from '../../store/cart/cart.types';
 
+import CheckoutItem from '../../components/checkout-item/checkout-item.component';
+
 import './checkout.styles.scss';
 
 interface checkoutProps extends checkoutSelectors {}
@@ -31,9 +33,9 @@ const CheckoutPage: React.FC<checkoutProps> = ({ checkoutItems, total }) => (
 			</div>
 		</div>
 
-		{checkoutItems.map((item) => {
-			return item.name;
-		})}
+		{checkoutItems.map((item) => (
+			<CheckoutItem key={item.id} item={item}/>
+		))}
 		<div className='total'>
 			<span>Total: £{total}</span>
 		</div>
