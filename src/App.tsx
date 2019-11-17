@@ -3,9 +3,9 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { AppState } from './store/root-reducer';
+import { AppState } from './store/root.reducer';
 import { getCurrentUser } from './store/user/user.selectors';
-import { setCurrentUser } from './store/user/user-actions';
+import { setCurrentUser } from './store/user/user.actions';
 import { auth, createUserProfileDocument } from './shared/config/firebase.utils';
 
 import Header from './components/header/header.component';

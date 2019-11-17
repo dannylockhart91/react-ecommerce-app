@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { AppState } from '../../store/root-reducer';
+import { AppState } from '../../store/root.reducer';
 import { getCurrentUser } from '../../store/user/user.selectors';
 import { getIsCartHidden } from '../../store/cart/cart.selectors';
 

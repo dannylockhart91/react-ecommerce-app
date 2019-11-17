@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { AppState } from '../../store/root-reducer';
+import { AppState } from '../../store/root.reducer';
 import { toggleShowCart } from '../../store/cart/cart-actions';
 import { getCartItemsCount } from '../../store/cart/cart.selectors';
 

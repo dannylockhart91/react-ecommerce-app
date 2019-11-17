@@ -4,7 +4,7 @@ import { createStructuredSelector } from 'reselect';
 
 import { getCartItems, getCartCostTotal } from '../../store/cart/cart.selectors';
 
-import { AppState } from '../../store/root-reducer';
+import { AppState } from '../../store/root.reducer';
 import { Item } from '../../store/cart/cart.types';
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
