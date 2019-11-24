@@ -13,6 +13,6 @@ export const getShopCollections = createSelector(
 
 export const getCollection = (collectionUrlParameter: string) => createSelector(
     [getShopCollections],
-    (collections: any) => collections[collectionUrlParameter])
+    (collections: any) => collections[collectionUrlParameter]);
 
 

@@ -11,25 +11,25 @@ import CollectionItem from '../../components/collection-item/collection-item.com
 import './collection.styles.scss';
 
 interface CollectionPageProps extends RouteComponentProps {
-	collection: ShopData;
+    collection: ShopData;
 }
 
 const CollectionPage: React.FC<CollectionPageProps> = ({ collection }) => {
-	const { title, items } = collection;
-	return (
-		<div className='collection-page-container'>
-			<h2 className='title'>{title}</h2>
-			<div className='items'>
-				{items.map((item: any) => (
-					<CollectionItem key={item.id} item={item} />
-				))}
-			</div>
-		</div>
-	);
+    const { title, items } = collection;
+    return (
+        <div className='collection-page-container'>
+            <h2 className='title'>{title}</h2>
+            <div className='items'>
+                {items.map((item: any) => (
+                    <CollectionItem key={item.id} item={item} />
+                ))}
+            </div>
+        </div>
+    );
 };
 
 const mapStateToProps = (state: AppState, ownProps: any) => ({
-	collection: getCollection(ownProps.match.params.collectionId)(state)
+    collection: getCollection(ownProps.match.params.collectionId)(state)
 });
 
 export default connect(mapStateToProps)(CollectionPage);
