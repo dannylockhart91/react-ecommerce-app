@@ -6,16 +6,16 @@ import { addItemToCart } from '../../store/cart/cart-actions';
 
 import CustomButton from '../custom-button/custom-button.component';
 
-import './component.item.styles.scss';
+import { CollectionItemContainer } from './collection-item.styles';
 interface CollectionItemProps {
 	item: Item;
 	addItemToCart: any;
 }
 
-const CollectionItem: React.FC<CollectionItemProps> = ({item, addItemToCart}) => {
+const CollectionItem: React.FC<CollectionItemProps> = ({ item, addItemToCart }) => {
 	const { imageUrl, name, price } = item;
 	return (
-		<div className='collection-item'>
+		<CollectionItemContainer className='collection-item'>
 			<div
 				className='image'
 				style={{
@@ -26,13 +26,10 @@ const CollectionItem: React.FC<CollectionItemProps> = ({item, addItemToCart}) =>
 				<span className='name'>{name}</span>
 				<span className='price'>£{price}</span>
 			</div>
-			<CustomButton
-				customClassName='custom-button'
-				inverted
-				handleClick={() => addItemToCart(item)}>
+			<CustomButton inverted handleClick={() => addItemToCart(item)}>
 				ADD TO CART
 			</CustomButton>
-		</div>
+		</CollectionItemContainer>
 	);
 };
 

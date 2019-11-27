@@ -10,12 +10,12 @@ import { Item } from '../../store/cart/cart.types';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 import StripeCheckoutButton from '../../components/stripe-payment-button/stripe-payment-button.component';
 
-import './checkout.styles.scss';
+import { CheckoutContainer } from './checkout.styles';
 
 interface checkoutProps extends checkoutSelectors {}
 
 const CheckoutPage: React.FC<checkoutProps> = ({ checkoutItems, total }) => (
-	<div className='checkout-page-container'>
+	<CheckoutContainer className='checkout-page-container'>
 		<div className='checkout-header'>
 			<div className='header-block'>
 				<span>Product</span>
@@ -40,13 +40,13 @@ const CheckoutPage: React.FC<checkoutProps> = ({ checkoutItems, total }) => (
 		<div className='total'>
 			<span>Total: £{total}</span>
 		</div>
-        <div className='test-payment-warning'>
-            *Please use the following test credit card for payments*
-            <br/>
-            4242 4242 4242 4242 - EXP: 01/20 - CVC: 123
-        </div>
+		<div className='test-payment-warning'>
+			*Please use the following test credit card for payments*
+			<br />
+			4242 4242 4242 4242 - EXP: 01/20 - CVC: 123
+		</div>
 		<StripeCheckoutButton price={total} />
-	</div>
+	</CheckoutContainer>
 );
 
 interface checkoutSelectors {

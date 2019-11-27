@@ -12,10 +12,10 @@ import CartItem from '../cart-item/cart-item.component';
 import CustomButton from '../custom-button/custom-button.component';
 
 import { CartDropdownProps, cartDropdownSelectors } from './cart-dropdown.types';
-import './cart-dropdown.styles.scss';
+import { CartDropdownContainer } from './cart-dropdown-styles';
 
 const CartDropdown: React.FC<CartDropdownProps> = ({ cartItems, dispatch, history }) => (
-	<div className='cart-dropdown'>
+	<CartDropdownContainer className='cart-dropdown'>
 		<div className='cart-items'>
 			{cartItems.length ? (
 				cartItems.map((item: Item) => <CartItem key={item.id} item={item} />)
@@ -30,7 +30,7 @@ const CartDropdown: React.FC<CartDropdownProps> = ({ cartItems, dispatch, histor
 			}}>
 			GO TO CHECKOUT
 		</CustomButton>
-	</div>
+	</CartDropdownContainer>
 );
 
 const mapStateToProps = createStructuredSelector<AppState, cartDropdownSelectors>({

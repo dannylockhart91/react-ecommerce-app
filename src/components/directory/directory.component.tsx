@@ -7,16 +7,16 @@ import { Section } from '../../store/directory/directory.types';
 import { getDirectorySections } from '../../store/directory/directory.selectors';
 
 import MenuItem from '../menu-item/menu-item.component';
-import './directory.styles.scss';
+import { DirectoryContainer } from './directory.styles';
 
 interface DirectoryProps extends DirectorySelectors {}
 
 const DirectoryComponent: React.FC<DirectoryProps> = ({ sections }) => (
-	<div className='directory-menu'>
+	<DirectoryContainer className='directory-menu'>
 		{sections.map(({ title, imageUrl, id, size, linkUrl }) => (
 			<MenuItem key={id} title={title} imageUrl={imageUrl} size={size ? size : ''} linkUrl={linkUrl} />
 		))}
-	</div>
+	</DirectoryContainer>
 );
 
 interface DirectorySelectors {
@@ -24,7 +24,7 @@ interface DirectorySelectors {
 }
 
 const mapStateToProps = createStructuredSelector<AppState, DirectorySelectors>({
-    sections: getDirectorySections
+	sections: getDirectorySections
 });
 
 export default connect(mapStateToProps)(DirectoryComponent);

@@ -1,5 +1,5 @@
 import React from 'react';
-import './cart-item.styles.scss';
+import { CartItemContainer } from './cart-item.styles';
 import { Item } from '../../store/cart/cart.types';
 
 interface CartItemProps {
@@ -8,7 +8,7 @@ interface CartItemProps {
 
 const CartItem: React.FC<CartItemProps> = ({ item }) => {
 	return (
-		<div className='cart-item-container'>
+		<CartItemContainer className='cart-item-container'>
 			<img src={item.imageUrl} alt='item' />
 			<div className='item-details'>
 				<span className='item-name'>{item.name}</span>
@@ -16,7 +16,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
 					{item.quantity} x £{item.price}
 				</span>
 			</div>
-		</div>
+		</CartItemContainer>
 	);
 };
 export default CartItem;

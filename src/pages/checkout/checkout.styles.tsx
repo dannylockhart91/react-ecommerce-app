@@ -1,5 +1,7 @@
-.checkout-page-container {
-	width: 55%;
+import styled from 'styled-components';
+
+export const CheckoutContainer = styled.div`
+	width: 70%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -28,7 +30,7 @@
 	}
 
 	button {
-        margin: 30px 0 0 auto;
+		margin: 30px 0 0 auto;
 	}
 
 	.test-payment-warning {
@@ -37,10 +39,8 @@
 		font-size: 28px;
 		color: red;
 	}
-}
 
-@media screen and(max-width: 900px) {
-	.checkout-page-container {
+	@media(max-width: 900px) {
 		width: 80%;
 	}
-}
+`;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import { AppState } from '../../store/root.reducer';
 import { getCurrentUser } from '../../store/user/user.selectors';
@@ -12,48 +12,48 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
 import { ReactComponent as Logo } from '../../assets/img/crown.svg';
 
-import './header.styles.scss';
-import { createStructuredSelector } from 'reselect';
+import { HeaderContainer, LogoContainer, HeaderLinks, OptionLink } from './header.styles';
 
 interface HeaderProps {
-	currentUser: any;
-	isHidden: boolean;
+    currentUser: any;
+    isHidden: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({ currentUser, isHidden }) => (
-	<div className='header-container'>
-		<Link className='logo-container' to='/'>
-			<Logo className='logo' />
-		</Link>
-		<div className='header-links'>
-			<Link className='link' to='/shop'>
-				SHOP
-			</Link>
-			<Link className='link' to='/shop'>
-				CONTACT
-			</Link>
-			{currentUser ? (
-				<div className='link' onClick={() => auth.signOut()}>
-					SIGN OUT
-				</div>
-			) : (
-				<Link className='link' to={'/auth'}>
-					SIGN IN
-				</Link>
-			)}
-			<CartIcon />
-		</div>
-		{isHidden ? null : <CartDropdown />}
-	</div>
+    <HeaderContainer>
+        <LogoContainer to='/'>
+            <Logo className='logo'/>
+        </LogoContainer>
+        <HeaderLinks>
+            <OptionLink to='/shop'>
+                SHOP
+            </OptionLink>
+            <OptionLink to='/shop'>
+                CONTACT
+            </OptionLink>
+            {currentUser ? (
+                <OptionLink as='div' onClick={() => auth.signOut()}>
+                    SIGN OUT
+                </OptionLink>
+            ) : (
+                <OptionLink to={'/auth'}>
+                    SIGN IN
+                </OptionLink>
+            )}
+            <CartIcon/>
+        </HeaderLinks>
+        {isHidden ? null : <CartDropdown/>}
+    </HeaderContainer>
 );
 
 interface headerSelectors {
-	currentUser: any | null;
-	isHidden: boolean;
+    currentUser: any | null;
+    isHidden: boolean;
 }
+
 const mapStateToProps = createStructuredSelector<AppState, headerSelectors>({
-	currentUser: getCurrentUser,
-	isHidden: getIsCartHidden
+    currentUser: getCurrentUser,
+    isHidden: getIsCartHidden
 });
 
 export default connect(mapStateToProps)(Header);

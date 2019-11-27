@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Item } from '../../store/cart/cart.types';
 import { clearItemFromCart, addItemToCart, removeItemFromCart } from '../../store/cart/cart-actions';
 
-import './checkout-item.styles.scss';
+import { CheckoutItemContainer } from './checkout-item.styles';
 interface CheckoutItemProps {
 	item: Item;
 	clearItem: any;
@@ -15,7 +15,7 @@ interface CheckoutItemProps {
 const CheckoutItem: React.FC<CheckoutItemProps> = ({ item, clearItem, addItem, removeItem }) => {
 	const { imageUrl, name, quantity, price } = item;
 	return (
-		<div className='checkout-item-container'>
+		<CheckoutItemContainer className='checkout-item-container'>
 			<div className='image-container'>
 				<img src={imageUrl} alt='item' />
 			</div>
@@ -33,7 +33,7 @@ const CheckoutItem: React.FC<CheckoutItemProps> = ({ item, clearItem, addItem, r
 			<div className='remove-button' onClick={() => clearItem(item)}>
 				&#10005;
 			</div>
-		</div>
+		</CheckoutItemContainer>
 	);
 };
 

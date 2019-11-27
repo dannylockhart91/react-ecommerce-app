@@ -11,12 +11,12 @@ import { store, persistor } from './store/store';
 import './index.scss';
 
 ReactDOM.render(
-	<Provider store={store}>
-		<BrowserRouter>
-			<PersistGate persistor={persistor}>
-				<App />
-			</PersistGate>
-		</BrowserRouter>
-	</Provider>,
-	document.getElementById('root')
+    <Provider store={store}>
+        <BrowserRouter>
+            <PersistGate persistor={persistor}>
+                <App />
+            </PersistGate>
+        </BrowserRouter>
+    </Provider>,
+    document.getElementById('root')
 );

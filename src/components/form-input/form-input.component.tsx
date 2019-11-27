@@ -1,32 +1,31 @@
-import React from "react";
+import React from 'react';
 
-import './form-input.styles.scss';
+import { FormInputContainer } from './form-input.styles';
+// import './form-input.styles.scss';
 
 interface FormInputProps {
-    handleChange: any,
-    label: string,
-    name: string,
-    type: string,
-    value: string,
-    required: boolean
+	handleChange: any;
+	label: string;
+	name: string;
+	type: string;
+	value: string;
+	required: boolean;
 }
 
 const FormInput: React.FC<FormInputProps> = (props) => (
-    <div className='group'>
-        <input className='form-input'
-               name={props.name}
-               type={props.type}
-               value={props.value}
-               onChange={props.handleChange}
-               required={props.required}/>
-        {
-            props.label ?
-                (<label className={`${props.value.length ? 'shrink' : ''} form-input-label`}>
-                    {props.label}
-                </label>)
-                : null
-        }
-    </div>
+	<FormInputContainer className='group'>
+		<input
+			className='form-input'
+			name={props.name}
+			type={props.type}
+			value={props.value}
+			onChange={props.handleChange}
+			required={props.required}
+		/>
+		{props.label ? (
+			<label className={`${props.value.length ? 'shrink' : ''} form-input-label`}>{props.label}</label>
+		) : null}
+	</FormInputContainer>
 );
 
 export default FormInput;

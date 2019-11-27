@@ -8,7 +8,7 @@ import { getCartItemsCount } from '../../store/cart/cart.selectors';
 
 import { ReactComponent as ShoppingIcon } from '../../assets/img/shopping-bag.svg';
 
-import './cart-icon.styles.scss';
+import { CartIconContainer } from './cart-icon.styles';
 
 interface CartIconProps {
 	toggleShowCart: any;
@@ -16,10 +16,10 @@ interface CartIconProps {
 }
 
 const CartIcon: React.FC<CartIconProps> = ({ toggleShowCart, cartItemCount }) => (
-	<div className='cart-icon' onClick={toggleShowCart}>
+	<CartIconContainer className='cart-icon' onClick={toggleShowCart}>
 		<ShoppingIcon className='shopping-icon' />
 		<span className='item-count'>{cartItemCount}</span>
-	</div>
+	</CartIconContainer>
 );
 
 const mapDispatchToProps = (dispatch: any) => ({

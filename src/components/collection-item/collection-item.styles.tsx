@@ -1,4 +1,6 @@
-.collection-item {
+import styled from 'styled-components';
+
+export const CollectionItemContainer = styled.div`
 	position: relative;
 	width: 22vw;
 	display: flex;
@@ -41,4 +43,4 @@
 			opacity: 0.9;
 		}
 	}
-}
+`;
