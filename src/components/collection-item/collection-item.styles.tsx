@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const CollectionItemContainer = styled.div`
 	position: relative;
-	width: 22vw;
+    width: 22vw;
+    max-width: 350px;
 	display: flex;
 	flex-direction: column;
 	height: 350px;

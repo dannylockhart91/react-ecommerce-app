@@ -1,12 +1,16 @@
-import { ShopState } from "./shop.types";
-import SHOP_DATA from './shop.data'
+import { ShopState, ShopActionTypes } from "./shop.types";
 
 const initialState: ShopState = {
-    collections: SHOP_DATA
+    collections: null
 }
 
-const shopRecuder = (state: ShopState = initialState, actions: any) => {
-    switch (actions.type) {
+const shopRecuder = (state: ShopState = initialState, action: any) => {
+    switch (action.type) {
+        case ShopActionTypes.UPDATE_COLLECTIONS:
+            return {
+                ...state,
+                collections: action.payload
+            }
         default:
             return state;
     }

@@ -39,9 +39,9 @@ export const createUserProfileDocument = async (userAuthObject: any, additionalD
     if (!userAuthObject) return;
 
     const userRef = firestore.doc(`users/${userAuthObject.uid}`);
-    const snapShot = await userRef.get();
+    const userSnapShot = await userRef.get();
 
-    if (!snapShot.exists) {
+    if (!userSnapShot.exists) {
         const { displayName, email } = userAuthObject;
         const createdAt = new Date();
 
@@ -58,3 +58,35 @@ export const createUserProfileDocument = async (userAuthObject: any, additionalD
     }
     return userRef;
 };
+
+/**
+ * Utility function to transform the data currently stored in the firebase database to a usable 
+ * format for the application
+ * @param collections {firebase.firestore.QuerySnapshot} The snapshot from the firestore database 
+ */
+export const convertCollectionSnapshotToMap = ((collections: firebase.firestore.QuerySnapshot) => {
+    const transformedCollections = collections.docs.map((document: any) => {
+        const { title, items } = document.data();
+        return {
+            routeName: encodeURI(title.toLowerCase()),
+            id: document.id,
+            title,
+            items
+        }
+    })
+    return transformedCollections.reduce((accumulator: any, collection: any) => {
+        accumulator[collection.title.toLowerCase()] = collection;
+        return accumulator;
+    }, {});
+})
+
+export const addCollectionAndDocuments = async (collectionKeyName: string, objectsToAdd: any) => {
+    const collectionRef = firestore.collection(collectionKeyName);
+
+    const batchCall = firestore.batch();
+    objectsToAdd.forEach((object: any) => {
+        const newDocRef = collectionRef.doc();
+        batchCall.set(newDocRef, object);
+    })
+    return await batchCall.commit()
+}

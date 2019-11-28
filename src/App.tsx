@@ -16,68 +16,67 @@ import ShopPage from './pages/shop/shop.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 import './App.scss';
 
-interface AppProps {
-    currentUser: any | null;
-    setCurrentUser: any;
+interface AppProps extends AppSelectors {
+	setCurrentUser: any;
 }
 
 class App extends React.Component<AppProps> {
-    firebaseAuthListener$: any = null;
+	firebaseAuthListener$: any = null;
 
-    componentDidMount(): void {
-        const { setCurrentUser } = this.props;
+	componentDidMount(): void {
+		const { setCurrentUser } = this.props;
 
-        this.firebaseAuthListener$ = auth.onAuthStateChanged(async (userAuthObject: any) => {
-            if (userAuthObject) {
-                const userRef = await createUserProfileDocument(userAuthObject);
-                if (userRef) {
-                    userRef.onSnapshot((snapshot) => {
-                        setCurrentUser({
-                            id: snapshot.id,
-                            ...snapshot.data()
-                        });
-                    });
-                }
-            } else {
-                setCurrentUser(null);
+		this.firebaseAuthListener$ = auth.onAuthStateChanged(async (userAuthObject: any) => {
+			if (userAuthObject) {
+				const userRef = await createUserProfileDocument(userAuthObject);
+				if (userRef) {
+					userRef.onSnapshot((snapshot) => {
+						setCurrentUser({
+							id: snapshot.id,
+							...snapshot.data()
+						});
+					});
+				}
+			} else {
+				setCurrentUser(null);
             }
-        });
-    }
+		});
+	}
 
-    componentWillUnmount(): void {
-        this.firebaseAuthListener$.unsubscribe();
-    }
+	componentWillUnmount(): void {
+		this.firebaseAuthListener$.unsubscribe();
+	}
 
-    render() {
-        return (
-            <div>
-                <Header />
-                <div className='page-container'>
-                    <Switch>
-                        <Route exact path='/' component={HomePage} />
-                        <Route path='/shop' component={ShopPage} />
-                        <Route exact path='/checkout' component={CheckoutPage} />
-                        <Route
-                            exact
-                            path='/auth'
-                            render={() => (this.props.currentUser ? <Redirect to={'/'} /> : <Authentication />)}
-                        />
-                    </Switch>
-                </div>
-            </div>
-        );
-    }
+	render() {
+		return (
+			<div>
+				<Header />
+				<div className='page-container'>
+					<Switch>
+						<Route exact path='/' component={HomePage} />
+						<Route path='/shop' component={ShopPage} />
+						<Route exact path='/checkout' component={CheckoutPage} />
+						<Route
+							exact
+							path='/auth'
+							render={() => (this.props.currentUser ? <Redirect to={'/'} /> : <Authentication />)}
+						/>
+					</Switch>
+				</div>
+			</div>
+		);
+	}
 }
 
-interface appSelectors {
-    currentUser: any | null;
+interface AppSelectors {
+	currentUser: any | null;
 }
-const mapStateToProps = createStructuredSelector<AppState, appSelectors>({
-    currentUser: getCurrentUser
+const mapStateToProps = createStructuredSelector<AppState, AppSelectors>({
+	currentUser: getCurrentUser,
 });
 
 const mapDispatchToProps = (dispatch: any) => ({
-    setCurrentUser: (user: any) => dispatch(setCurrentUser(user))
+	setCurrentUser: (user: any) => dispatch(setCurrentUser(user))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

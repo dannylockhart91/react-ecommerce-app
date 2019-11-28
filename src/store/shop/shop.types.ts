@@ -1,5 +1,5 @@
 export interface ShopState {
-    collections: { [key: string]: ShopData }
+    collections: { [key: string]: ShopData } | null
 }
 export interface ShopData {
     id: number,
@@ -14,3 +14,14 @@ export interface ShopDataItems {
     imageUrl: string,
     price: number
 }
+
+export enum ShopActionTypes {
+    UPDATE_COLLECTIONS = 'UPDATE_COLLECTIONS'
+}
+
+interface UpdateCollections {
+    type: ShopActionTypes.UPDATE_COLLECTIONS,
+    payload: { [key: string]: ShopData }
+}
+
+export type ShopActions = UpdateCollections;
