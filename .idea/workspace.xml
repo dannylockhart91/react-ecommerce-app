@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/collection-overview/collections-overview.container.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/withSpinner/hoc-spinner.components.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/withSpinner/hoc-spinner.styles.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/collection/collection.container.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/root-saga.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/shop/shop.sagas.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/collection-overview/collection-overview.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-overview/collection-overview.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/collection-overview/collection-overview.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-overview/collection-overview.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom-button/custom-button.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-button/custom-button.styles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.styles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu-item/menu-item.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu-item/menu-item.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/collection/collection.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/collection/collection.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/config/firebase.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/config/firebase.utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/shop/shop.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/shop/shop.actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/shop/shop.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/shop/shop.reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/shop/shop.selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/shop/shop.selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/shop/shop.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/shop/shop.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +107,7 @@
       <workItem from="1573999882117" duration="646000" />
       <workItem from="1574593834689" duration="8826000" />
       <workItem from="1576407838196" duration="2588000" />
-      <workItem from="1576410730164" duration="5251000" />
+      <workItem from="1576410730164" duration="9790000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
@@ -208,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574607375192</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="- Created HOC spinner&#10;- Implemented Container pattern on Collection and CollectionOverview&#10;- Implemented ASYNC api request 'FetchCollectionsAsync'">
+      <created>1576417465369</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1576417465369</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,13 +233,18 @@
     <MESSAGE value="- Added redux to application&#10;- Implemented user reducer / actions to application on login/logout etc" />
     <MESSAGE value="- Added type checking to redux actions/state etc" />
     <MESSAGE value="- Removed redux-logger from production builds of the app" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Removed redux-logger from production builds of the app" />
+    <MESSAGE value="- Created HOC spinner&#10;- Implemented Container pattern on Collection and CollectionOverview&#10;- Implemented ASYNC api request 'FetchCollectionsAsync'" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Created HOC spinner&#10;- Implemented Container pattern on Collection and CollectionOverview&#10;- Implemented ASYNC api request 'FetchCollectionsAsync'" />
   </component>
   <component name="WindowStateProjectService">
     <state x="621" y="191" key="#ESLint" timestamp="1576407969401">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="621" y="191" key="#ESLint/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576407969401" />
+    <state x="517" y="36" key="CommitChangelistDialog2" timestamp="1576417461891">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="517" y="36" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576417461891" />
     <state width="1899" height="277" key="GridCell.Tab.0.bottom" timestamp="1576415668297">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -272,5 +269,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="647" y="266" width="626" height="518" key="find.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576416210722" />
+    <state width="600" height="440" key="javadoc.popup" timestamp="1576422268849">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="600" height="440" key="javadoc.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576422268849" />
   </component>
 </project>
