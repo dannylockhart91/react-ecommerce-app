@@ -13,6 +13,10 @@ export const getShopCollections = createSelector(
 
 export const getCollection = (collectionUrlParameter: string) => createSelector(
     [getShopCollections],
-    (collections: any) => collections[collectionUrlParameter]);
+    (collections: any) => collections ? collections[collectionUrlParameter] : null);
+
+export const getIsFetching = createSelector(
+    [getShopState],
+    (state: ShopState) => state.isFetching);
 
 

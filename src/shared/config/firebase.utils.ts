@@ -60,9 +60,9 @@ export const createUserProfileDocument = async (userAuthObject: any, additionalD
 };
 
 /**
- * Utility function to transform the data currently stored in the firebase database to a usable 
+ * Utility function to transform the data currently stored in the firebase database to a usable
  * format for the application
- * @param collections {firebase.firestore.QuerySnapshot} The snapshot from the firestore database 
+ * @param collections {firebase.firestore.QuerySnapshot} The snapshot from the firestore database
  */
 export const convertCollectionSnapshotToMap = ((collections: firebase.firestore.QuerySnapshot) => {
     const transformedCollections = collections.docs.map((document: any) => {
@@ -72,13 +72,13 @@ export const convertCollectionSnapshotToMap = ((collections: firebase.firestore.
             id: document.id,
             title,
             items
-        }
-    })
+        };
+    });
     return transformedCollections.reduce((accumulator: any, collection: any) => {
         accumulator[collection.title.toLowerCase()] = collection;
         return accumulator;
     }, {});
-})
+});
 
 export const addCollectionAndDocuments = async (collectionKeyName: string, objectsToAdd: any) => {
     const collectionRef = firestore.collection(collectionKeyName);
@@ -87,6 +87,6 @@ export const addCollectionAndDocuments = async (collectionKeyName: string, objec
     objectsToAdd.forEach((object: any) => {
         const newDocRef = collectionRef.doc();
         batchCall.set(newDocRef, object);
-    })
-    return await batchCall.commit()
-}
+    });
+    return await batchCall.commit();
+};

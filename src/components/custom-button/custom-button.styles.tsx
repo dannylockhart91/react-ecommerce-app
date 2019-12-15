@@ -35,11 +35,11 @@ const GoggleButtonStyle = css`
 `;
 
 const getButtonStyles = (props: CustomButtonProps) => {
-	if (props.googleSignIn) {
-		return GoggleButtonStyle;
-	}
+    if (props.googleSignIn) {
+        return GoggleButtonStyle;
+    }
 
-	return props.inverted ? InvertedButtonStyle : ButtonStyles;
+    return props.inverted ? InvertedButtonStyle : ButtonStyles;
 };
 
 export const CustomButtonContainer = styled.button`

@@ -11,15 +11,17 @@ import { CollectionOverviewContainer } from './collection-overview.styles';
 import { CollectionOverviewProps, CollectionOverviewSelectors } from './collection-overview.types';
 
 const CollectionOverview: React.FC<CollectionOverviewProps> = ({ collections }) => (
-	<CollectionOverviewContainer className='collections-overview-container'>
-		{Object.values(collections).map((collection) => (
-			<CollectionPreview key={collection.id} title={collection.title} items={collection.items} />
-		))}
-	</CollectionOverviewContainer>
+    <CollectionOverviewContainer className='collections-overview-container'>
+        {collections
+            ? Object.values(collections).map((collection) => (
+                <CollectionPreview key={collection.id} title={collection.title} items={collection.items}/>
+            ))
+            : []}
+    </CollectionOverviewContainer>
 );
 
 const mapStateToProps = createStructuredSelector<AppState, CollectionOverviewSelectors>({
-	collections: getShopCollections
+    collections: getShopCollections
 });
 
 export default connect(mapStateToProps)(CollectionOverview);

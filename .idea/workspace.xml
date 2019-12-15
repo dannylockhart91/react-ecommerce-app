@@ -2,17 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/custom-button/custom-button.styles.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header.styles.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/homepage.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/collection-overview/collections-overview.container.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/withSpinner/hoc-spinner.components.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/withSpinner/hoc-spinner.styles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/collection/collection.container.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collection-overview/collection-overview.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-overview/collection-overview.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collection-overview/collection-overview.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-overview/collection-overview.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom-button/custom-button.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-button/custom-button.styles.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/header.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/homepage.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/homepage.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu-item/menu-item.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu-item/menu-item.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/collection/collection.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/collection/collection.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/config/firebase.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/config/firebase.utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/shop/shop.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/shop/shop.actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/shop/shop.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/shop/shop.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/shop/shop.selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/shop/shop.selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/shop/shop.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/shop/shop.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,15 +37,24 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="D:\Documents\Development\uDemy\React\ReactCourse\react-ecommerce-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -41,20 +62,18 @@
       <recent name="D:\Documents\Development\uDemy\React\ReactCourse\ecommerce-app\src\pages\homepage" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -67,6 +86,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -85,6 +121,8 @@
       <workItem from="1573819030375" duration="164000" />
       <workItem from="1573999882117" duration="646000" />
       <workItem from="1574593834689" duration="8826000" />
+      <workItem from="1576407838196" duration="2588000" />
+      <workItem from="1576410730164" duration="5251000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
@@ -204,5 +242,35 @@
     <MESSAGE value="- Added type checking to redux actions/state etc" />
     <MESSAGE value="- Removed redux-logger from production builds of the app" />
     <option name="LAST_COMMIT_MESSAGE" value="- Removed redux-logger from production builds of the app" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="621" y="191" key="#ESLint" timestamp="1576407969401">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="621" y="191" key="#ESLint/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576407969401" />
+    <state width="1899" height="277" key="GridCell.Tab.0.bottom" timestamp="1576415668297">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576415668297" />
+    <state width="1899" height="277" key="GridCell.Tab.0.center" timestamp="1576415668297">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="277" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576415668297" />
+    <state width="1899" height="277" key="GridCell.Tab.0.left" timestamp="1576415668297">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="277" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576415668297" />
+    <state width="1899" height="277" key="GridCell.Tab.0.right" timestamp="1576415668297">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576415668297" />
+    <state x="461" y="167" key="SettingsEditor" timestamp="1576409357190">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576409357190" />
+    <state x="647" y="266" width="626" height="518" key="find.popup" timestamp="1576416210722">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="647" y="266" width="626" height="518" key="find.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576416210722" />
   </component>
 </project>

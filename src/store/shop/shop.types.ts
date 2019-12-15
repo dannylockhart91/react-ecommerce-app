@@ -1,5 +1,7 @@
 export interface ShopState {
-    collections: { [key: string]: ShopData } | null
+    collections: { [key: string]: ShopData } | null,
+    isFetching: boolean
+    errorMessage: string | null
 }
 export interface ShopData {
     id: number,
@@ -16,12 +18,29 @@ export interface ShopDataItems {
 }
 
 export enum ShopActionTypes {
-    UPDATE_COLLECTIONS = 'UPDATE_COLLECTIONS'
+    FetchCollections = '[Shop] Fetch Collections',
+    FetchCollectionsSuccess = '[Shop] Fetch Collections Success',
+    FetchCollectionsFailed = '[Shop] Fetch Collections Failed',
+    UpdateCollections = '[Shop] Update Collections',
 }
 
-interface UpdateCollections {
-    type: ShopActionTypes.UPDATE_COLLECTIONS,
+interface FetchCollections {
+    type: ShopActionTypes.FetchCollections
+}
+
+interface FetchCollectionsSuccess {
+    type: ShopActionTypes.FetchCollectionsSuccess
     payload: { [key: string]: ShopData }
 }
 
-export type ShopActions = UpdateCollections;
+interface FetchCollectionsFailed {
+    type: ShopActionTypes.FetchCollectionsFailed
+    payload: string
+}
+
+interface UpdateCollections {
+    type: ShopActionTypes.UpdateCollections,
+    payload: { [key: string]: ShopData }
+}
+
+export type ShopActions = FetchCollections | FetchCollectionsSuccess | FetchCollectionsFailed |UpdateCollections;
