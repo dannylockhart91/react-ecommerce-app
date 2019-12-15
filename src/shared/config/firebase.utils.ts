@@ -22,11 +22,11 @@ export const firestore = firebase.firestore();
 /*
 Google Authentication Utils
  */
-const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+googleProvider.setCustomParameters({
     prompt: 'select_account'
 });
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
 /**
  * Function called when the App.tsx component mounts. Checks to see if there is currently a user

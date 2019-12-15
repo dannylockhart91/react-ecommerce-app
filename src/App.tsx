@@ -5,8 +5,6 @@ import { createStructuredSelector } from 'reselect';
 
 import { AppState } from './store/root.reducer';
 import { getCurrentUser } from './store/user/user.selectors';
-import { setCurrentUser } from './store/user/user.actions';
-import { auth, createUserProfileDocument } from './shared/config/firebase.utils';
 
 import Header from './components/header/header.component';
 
@@ -17,34 +15,14 @@ import CheckoutPage from './pages/checkout/checkout.component';
 import './App.scss';
 
 interface AppProps extends AppSelectors {
-    setCurrentUser: any;
 }
 
 class App extends React.Component<AppProps> {
-    firebaseAuthListener$: any = null;
 
     componentDidMount(): void {
-        const { setCurrentUser } = this.props;
-
-        this.firebaseAuthListener$ = auth.onAuthStateChanged(async (userAuthObject: any) => {
-            if (userAuthObject) {
-                const userRef = await createUserProfileDocument(userAuthObject);
-                if (userRef) {
-                    userRef.onSnapshot((snapshot) => {
-                        setCurrentUser({
-                            id: snapshot.id,
-                            ...snapshot.data()
-                        });
-                    });
-                }
-            } else {
-                setCurrentUser(null);
-            }
-        });
     }
 
     componentWillUnmount(): void {
-        this.firebaseAuthListener$.unsubscribe();
     }
 
     render() {
@@ -75,8 +53,4 @@ const mapStateToProps = createStructuredSelector<AppState, AppSelectors>({
     currentUser: getCurrentUser,
 });
 
-const mapDispatchToProps = (dispatch: any) => ({
-    setCurrentUser: (user: any) => dispatch(setCurrentUser(user))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);

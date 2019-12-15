@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/root-saga.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/shop/shop.sagas.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/user/user.sagas.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/config/firebase.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/config/firebase.utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/root-saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/root-saga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user/user.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/user.actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user/user.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/user.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user/user.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/user.types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +110,7 @@
       <workItem from="1573999882117" duration="646000" />
       <workItem from="1574593834689" duration="8826000" />
       <workItem from="1576407838196" duration="2588000" />
-      <workItem from="1576410730164" duration="9790000" />
+      <workItem from="1576410730164" duration="15897000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
@@ -200,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576417465369</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="- Implemented Redux-Saga start&#10;- FetchCollection now utilises a saga side effect to handle fetching the data and then calling 'put()' ti dispatch actions&#10;- Removed redux-thunk">
+      <created>1576422844143</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1576422844143</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,17 +244,18 @@
     <MESSAGE value="- Added type checking to redux actions/state etc" />
     <MESSAGE value="- Removed redux-logger from production builds of the app" />
     <MESSAGE value="- Created HOC spinner&#10;- Implemented Container pattern on Collection and CollectionOverview&#10;- Implemented ASYNC api request 'FetchCollectionsAsync'" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Created HOC spinner&#10;- Implemented Container pattern on Collection and CollectionOverview&#10;- Implemented ASYNC api request 'FetchCollectionsAsync'" />
+    <MESSAGE value="- Implemented Redux-Saga start&#10;- FetchCollection now utilises a saga side effect to handle fetching the data and then calling 'put()' ti dispatch actions&#10;- Removed redux-thunk" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Implemented Redux-Saga start&#10;- FetchCollection now utilises a saga side effect to handle fetching the data and then calling 'put()' ti dispatch actions&#10;- Removed redux-thunk" />
   </component>
   <component name="WindowStateProjectService">
     <state x="621" y="191" key="#ESLint" timestamp="1576407969401">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="621" y="191" key="#ESLint/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576407969401" />
-    <state x="517" y="36" key="CommitChangelistDialog2" timestamp="1576417461891">
+    <state x="517" y="27" key="CommitChangelistDialog2" timestamp="1576422842547">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="517" y="36" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576417461891" />
+    <state x="517" y="27" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576422842547" />
     <state width="1899" height="277" key="GridCell.Tab.0.bottom" timestamp="1576415668297">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -265,13 +276,17 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576409357190" />
-    <state x="647" y="266" width="626" height="518" key="find.popup" timestamp="1576416210722">
+    <state x="647" y="266" width="626" height="518" key="find.popup" timestamp="1576428354250">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="647" y="266" width="626" height="518" key="find.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576416210722" />
+    <state x="647" y="266" width="626" height="518" key="find.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576428354250" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1576422268849">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="600" height="440" key="javadoc.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576422268849" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1576423316734">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576423316734" />
   </component>
 </project>
