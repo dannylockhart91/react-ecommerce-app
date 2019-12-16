@@ -8,7 +8,7 @@ import { getCurrentUser } from './store/user/user.selectors';
 
 import Header from './components/header/header.component';
 
-import Authentication from './pages/authentication/authentication.component';
+import AuthenticationContainer from "./pages/authentication/authentication.container";
 import HomePage from './pages/home/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import CheckoutPage from './pages/checkout/checkout.component';
@@ -26,18 +26,20 @@ class App extends React.Component<AppProps> {
     }
 
     render() {
+        const { currentUser } = this.props;
         return (
             <div>
                 <Header />
                 <div className='page-container'>
                     <Switch>
-                        <Route exact path='/' component={HomePage} />
-                        <Route path='/shop' component={ShopPage} />
-                        <Route exact path='/checkout' component={CheckoutPage} />
+                        <Route exact path='/' component={HomePage}/>
+                        <Route path='/shop' component={ShopPage}/>
+                        <Route exact path='/checkout' component={CheckoutPage}/>
                         <Route
                             exact
                             path='/auth'
-                            render={() => (this.props.currentUser ? <Redirect to={'/'} /> : <Authentication />)}
+                            // @ts-ignore
+                            render={() => (currentUser ? <Redirect to={'/'}/> : <AuthenticationContainer/>)}
                         />
                     </Switch>
                 </div>
@@ -49,6 +51,7 @@ class App extends React.Component<AppProps> {
 interface AppSelectors {
     currentUser: any | null;
 }
+
 const mapStateToProps = createStructuredSelector<AppState, AppSelectors>({
     currentUser: getCurrentUser,
 });

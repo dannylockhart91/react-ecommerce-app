@@ -1,6 +1,6 @@
 import { takeLatest, put, all, call } from 'redux-saga/effects';
 import { UserActions } from './user.types';
-import { signInSuccess, signInFailed } from "./user.actions";
+import { signInSuccess, signInFailed, signOutSuccess, signOutFailed } from "./user.actions";
 import { googleProvider, auth, createUserProfileDocument } from '../../shared/config/firebase.utils';
 
 export function* getSnapshotFromUserAuth(userAuth: any) {
@@ -36,12 +36,11 @@ export function* signInWithEmail({ payload: { email, password } }: any) {
 }
 
 export function* signOut() {
-    console.log('hello');
     try {
-        const signout = yield auth.signOut();
-        console.log(signout);
+        yield auth.signOut();
+        yield put(signOutSuccess())
     } catch (error) {
-        console.log(error);
+        put(signOutFailed(error))
     }
 }
 

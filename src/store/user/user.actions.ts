@@ -1,11 +1,5 @@
 import { UserActions, UserActionTypes } from "./user.types";
 
-
-export const setCurrentUser = (user: object | null): UserActionTypes => ({
-    type: UserActions.SET_CURRENT_USER,
-    payload: user
-});
-
 export const googleSignIn = (): UserActionTypes => ({
     type: UserActions.GOOGLE_SIGN_IN
 });
@@ -27,4 +21,13 @@ export const signInFailed = (error: any): UserActionTypes => ({
 
 export const signOut = (): UserActionTypes => ({
     type: UserActions.SIGN_OUT
+});
+
+export const signOutSuccess = (): UserActionTypes => ({
+    type: UserActions.SIGN_OUT_SUCCESS
+});
+
+export const signOutFailed = (error: any): UserActionTypes => ({
+    type: UserActions.SIGN_OUT_FAILED,
+    payload: error
 });
