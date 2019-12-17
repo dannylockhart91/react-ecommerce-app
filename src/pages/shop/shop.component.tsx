@@ -9,13 +9,13 @@ import CollectionPageContainer from "../collection/collection.container";
 
 interface ShopPageProps extends RouteComponentProps {
     updateCollections: any;
-    FetchCollections: any;
+    fetchCollections: any;
 }
 
 class ShopPage extends React.Component<ShopPageProps> {
     componentDidMount() {
-        const { FetchCollections } = this.props;
-        FetchCollections();
+        const { fetchCollections } = this.props;
+        fetchCollections();
     }
 
     render() {
@@ -39,7 +39,7 @@ class ShopPage extends React.Component<ShopPageProps> {
 }
 
 const mapDispatchToProps = (dispatch: any) => ({
-    FetchCollections: () => dispatch(FetchCollections())
+    fetchCollections: () => dispatch(FetchCollections())
 });
 
 export default connect(null, mapDispatchToProps)(ShopPage);

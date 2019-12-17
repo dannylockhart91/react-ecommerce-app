@@ -11,30 +11,40 @@ export interface Item {
     quantity?: number
 }
 
-export enum CartActionTypes {
+export enum CartActions {
     TOGGLE_SHOW_CART = 'TOGGLE_SHOW_CART',
     ADD_ITEM_TO_CART = 'ADD_ITEM_TO_CART',
     REMOVE_ITEM_FROM_CART = 'REMOVE_ITEM_FROM_CART',
-    CLEAR_ITEM_FROM_CART = 'CLEAR_ITEM_FROM_CART'
+    CLEAR_ITEM_FROM_CART = 'CLEAR_ITEM_FROM_CART',
+    CLEAR_CART = '[Cart] Clear cart'
 }
 
 interface ToggleShowCart {
-    type: typeof CartActionTypes.TOGGLE_SHOW_CART
+    type: typeof CartActions.TOGGLE_SHOW_CART
 }
 
 interface AddItemToCart {
-    type: typeof CartActionTypes.ADD_ITEM_TO_CART,
+    type: typeof CartActions.ADD_ITEM_TO_CART,
     payload: Item
 }
 
 interface RemoveItemFromCart {
-    type: typeof CartActionTypes.REMOVE_ITEM_FROM_CART,
+    type: typeof CartActions.REMOVE_ITEM_FROM_CART,
     payload: Item
 }
 
 interface ClearItemFromCart {
-    type: typeof CartActionTypes.CLEAR_ITEM_FROM_CART,
+    type: typeof CartActions.CLEAR_ITEM_FROM_CART,
     payload: Item
 }
 
-export type CartActions = ToggleShowCart | AddItemToCart | RemoveItemFromCart | ClearItemFromCart
+interface ClearCart {
+    type: typeof CartActions.CLEAR_CART
+}
+
+export type CartActionTypes =
+    ToggleShowCart |
+    AddItemToCart |
+    RemoveItemFromCart |
+    ClearItemFromCart |
+    ClearCart;

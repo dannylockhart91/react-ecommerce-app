@@ -1,17 +1,25 @@
 export interface UserState {
     currentUser: object | null,
     isLoading: boolean,
-    signInError: object | any | null
+    authenticationError: object | any | null
 }
 
 export enum UserActions {
+    CHECK_IS_USER_AUTHENTICATED = '[Authentication] Check is user authenticated',
     EMAIL_SIGN_IN = '[Authentication] Email sign in',
     GOOGLE_SIGN_IN = '[Authentication] Google sign in',
     SIGN_IN_SUCCESS = '[Authentication] Sign in success',
     SIGN_IN_FAILED = '[Authentication] Sign in failed',
     SIGN_OUT = '[Authentication] Sign out',
     SIGN_OUT_SUCCESS = '[Authentication] Sign out success',
-    SIGN_OUT_FAILED = '[Authentication] Sign out failed'
+    SIGN_OUT_FAILED = '[Authentication] Sign out failed',
+    SIGN_UP = '[Authentication] Sign up',
+    SIGN_UP_SUCCESS = '[Authentication] Sign up success',
+    SIGN_UP_FAILED = '[Authentication] Sign up failed'
+}
+
+interface CheckIsUserAuthenticated {
+    type: typeof UserActions.CHECK_IS_USER_AUTHENTICATED
 }
 
 interface GoogleSignInAction {
@@ -41,7 +49,7 @@ interface SignOutAction {
 }
 
 interface SignOutSuccessAction {
-    type: typeof UserActions.SIGN_OUT_SUCCESS
+    type: typeof UserActions.SIGN_OUT_SUCCESS,
 }
 
 interface SignOutFailedAction {
@@ -49,11 +57,37 @@ interface SignOutFailedAction {
     payload: object
 }
 
+interface SignUp {
+    type: typeof UserActions.SIGN_UP,
+    payload: {
+        displayName: string
+        email: string,
+        password: string
+    }
+}
+
+interface SignUpSuccess {
+    type: typeof UserActions.SIGN_UP_SUCCESS,
+    payload: {
+        user: any,
+        displayName: string
+    }
+}
+
+interface SignUpFailed {
+    type: typeof UserActions.SIGN_UP_FAILED,
+    payload: any
+}
+
 export type UserActionTypes =
+    CheckIsUserAuthenticated |
     GoogleSignInAction |
     SignInSuccessAction |
     SignInFailedAction |
     EmailSignInAction |
     SignOutAction |
     SignOutSuccessAction |
-    SignOutFailedAction;
+    SignOutFailedAction |
+    SignUp |
+    SignUpSuccess |
+    SignUpFailed;

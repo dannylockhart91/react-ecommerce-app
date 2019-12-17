@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import { AppState } from './store/root.reducer';
+import { checkIsUserAuthenticated } from './store/user/user.actions';
 import { getCurrentUser } from './store/user/user.selectors';
 
 import Header from './components/header/header.component';
@@ -15,11 +16,14 @@ import CheckoutPage from './pages/checkout/checkout.component';
 import './App.scss';
 
 interface AppProps extends AppSelectors {
+    checkIsUserAuthenticated: any;
 }
 
 class App extends React.Component<AppProps> {
 
     componentDidMount(): void {
+        const { checkIsUserAuthenticated } = this.props;
+        checkIsUserAuthenticated();
     }
 
     componentWillUnmount(): void {
@@ -29,7 +33,7 @@ class App extends React.Component<AppProps> {
         const { currentUser } = this.props;
         return (
             <div>
-                <Header />
+                <Header/>
                 <div className='page-container'>
                     <Switch>
                         <Route exact path='/' component={HomePage}/>
@@ -47,13 +51,16 @@ class App extends React.Component<AppProps> {
         );
     }
 }
-
 interface AppSelectors {
-    currentUser: any | null;
+    currentUser: any
 }
+
+const mapDispatchToProps = (dispatch: any) => ({
+    checkIsUserAuthenticated: () => dispatch(checkIsUserAuthenticated())
+});
 
 const mapStateToProps = createStructuredSelector<AppState, AppSelectors>({
     currentUser: getCurrentUser,
 });
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

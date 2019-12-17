@@ -59,6 +59,15 @@ export const createUserProfileDocument = async (userAuthObject: any, additionalD
     return userRef;
 };
 
+export const getCurrentUser = () => {
+    return new Promise((resolve, reject) => {
+        const unsubscribe = auth.onAuthStateChanged((userAuth: any) => {
+            unsubscribe();
+            resolve(userAuth);
+        }, reject);
+    });
+};
+
 /**
  * Utility function to transform the data currently stored in the firebase database to a usable
  * format for the application

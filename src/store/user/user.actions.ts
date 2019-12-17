@@ -1,5 +1,9 @@
 import { UserActions, UserActionTypes } from "./user.types";
 
+export const checkIsUserAuthenticated = (): UserActionTypes => ({
+    type: UserActions.CHECK_IS_USER_AUTHENTICATED
+});
+
 export const googleSignIn = (): UserActionTypes => ({
     type: UserActions.GOOGLE_SIGN_IN
 });
@@ -16,6 +20,21 @@ export const signInSuccess = (user: any): UserActionTypes => ({
 
 export const signInFailed = (error: any): UserActionTypes => ({
     type: UserActions.SIGN_IN_FAILED,
+    payload: error
+});
+
+export const signUp = (payload: { displayName: string, email: string, password: string }): UserActionTypes => ({
+    type: UserActions.SIGN_UP,
+    payload
+});
+
+export const signUpSuccess = (payload: { user: any, displayName: string }): UserActionTypes => ({
+    type: UserActions.SIGN_UP_SUCCESS,
+    payload
+});
+
+export const signUpFailed = (error: any): UserActionTypes => ({
+    type: UserActions.SIGN_UP_FAILED,
     payload: error
 });
 
