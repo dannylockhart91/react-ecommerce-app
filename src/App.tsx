@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -19,38 +19,32 @@ interface AppProps extends AppSelectors {
     checkIsUserAuthenticated: any;
 }
 
-class App extends React.Component<AppProps> {
+const App: React.FC<AppProps> = ({ currentUser, checkIsUserAuthenticated }) => {
 
-    componentDidMount(): void {
-        const { checkIsUserAuthenticated } = this.props;
+    useEffect(() => {
         checkIsUserAuthenticated();
-    }
+    }, [checkIsUserAuthenticated]);
 
-    componentWillUnmount(): void {
-    }
-
-    render() {
-        const { currentUser } = this.props;
-        return (
-            <div>
-                <Header/>
-                <div className='page-container'>
-                    <Switch>
-                        <Route exact path='/' component={HomePage}/>
-                        <Route path='/shop' component={ShopPage}/>
-                        <Route exact path='/checkout' component={CheckoutPage}/>
-                        <Route
-                            exact
-                            path='/auth'
-                            // @ts-ignore
-                            render={() => (currentUser ? <Redirect to={'/'}/> : <AuthenticationContainer/>)}
-                        />
-                    </Switch>
-                </div>
+    return (
+        <div>
+            <Header/>
+            <div className='page-container'>
+                <Switch>
+                    <Route exact path='/' component={HomePage}/>
+                    <Route path='/shop' component={ShopPage}/>
+                    <Route exact path='/checkout' component={CheckoutPage}/>
+                    <Route
+                        exact
+                        path='/auth'
+                        // @ts-ignore
+                        render={() => (currentUser ? <Redirect to={'/'}/> : <AuthenticationContainer/>)}
+                    />
+                </Switch>
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
+
 interface AppSelectors {
     currentUser: any
 }

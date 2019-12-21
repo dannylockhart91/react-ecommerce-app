@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/cart/cart.sagas.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sign-up/sign-up.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sign-up/sign-up.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/config/firebase.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/config/firebase.utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/cart/cart-actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart/cart-actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/cart/cart-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart/cart-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/cart/cart.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/cart/cart.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/root-saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/root-saga.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/shop/shop.sagas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/shop/shop.sagas.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/user/user.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/user.actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/user/user.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/user.reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/user/user.sagas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/user.sagas.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/user/user.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/user.types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +27,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -49,7 +38,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="ts.external.directory.path" value="C:\Users\Danny.Elliott\Desktop\Projects\Learning\react-ecommerce-app\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\Documents\Development\uDemy\React\ReactCourse\react-ecommerce-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -117,9 +106,7 @@
       <workItem from="1574593834689" duration="8826000" />
       <workItem from="1576407838196" duration="2588000" />
       <workItem from="1576410730164" duration="15897000" />
-      <workItem from="1576498742657" duration="528000" />
-      <workItem from="1576499473419" duration="4084000" />
-      <workItem from="1576577400395" duration="11007000" />
+      <workItem from="1576942997402" duration="4477000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
@@ -219,14 +206,7 @@
       <option name="project" value="LOCAL" />
       <updated>1576422844143</updated>
     </task>
-    <task id="LOCAL-00015" summary="- Create authentication.container.tsx so house the loading icon when the sign-in process is currently initialised.&#10;- Added authentication.container.tsx to App.tsx in the render() Route&#10;- Added withRouter to header.component.tsx so that when clicking 'Sign Out' button, the user is redirected to the HOME page&#10;- Removed redundant code">
-      <created>1576502461206</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1576502461206</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,64 +241,45 @@
     <MESSAGE value="- Removed redux-logger from production builds of the app" />
     <MESSAGE value="- Created HOC spinner&#10;- Implemented Container pattern on Collection and CollectionOverview&#10;- Implemented ASYNC api request 'FetchCollectionsAsync'" />
     <MESSAGE value="- Implemented Redux-Saga start&#10;- FetchCollection now utilises a saga side effect to handle fetching the data and then calling 'put()' ti dispatch actions&#10;- Removed redux-thunk" />
-    <MESSAGE value="- Create authentication.container.tsx so house the loading icon when the sign-in process is currently initialised.&#10;- Added authentication.container.tsx to App.tsx in the render() Route&#10;- Added withRouter to header.component.tsx so that when clicking 'Sign Out' button, the user is redirected to the HOME page&#10;- Removed redundant code" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Create authentication.container.tsx so house the loading icon when the sign-in process is currently initialised.&#10;- Added authentication.container.tsx to App.tsx in the render() Route&#10;- Added withRouter to header.component.tsx so that when clicking 'Sign Out' button, the user is redirected to the HOME page&#10;- Removed redundant code" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Implemented Redux-Saga start&#10;- FetchCollection now utilises a saga side effect to handle fetching the data and then calling 'put()' ti dispatch actions&#10;- Removed redux-thunk" />
   </component>
   <component name="WindowStateProjectService">
     <state x="621" y="191" key="#ESLint" timestamp="1576407969401">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="621" y="191" key="#ESLint/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576407969401" />
-    <state x="689" y="319" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576503473146">
+    <state x="517" y="27" key="CommitChangelistDialog2" timestamp="1576422842547">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="689" y="319" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1576503473146" />
-    <state x="517" y="4" key="CommitChangelistDialog2" timestamp="1576591622366">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="517" y="4" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1576591622366" />
     <state x="517" y="27" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576422842547" />
-    <state x="169" y="100" key="DiffContextDialog" timestamp="1576591620908">
+    <state width="1899" height="277" key="GridCell.Tab.0.bottom" timestamp="1576946811762">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="169" y="100" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1576591620908" />
-    <state width="1899" height="277" key="GridCell.Tab.0.bottom" timestamp="1576577560895">
+    <state width="1899" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576946811762" />
+    <state width="1899" height="277" key="GridCell.Tab.0.center" timestamp="1576946811762">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1576577560895" />
-    <state width="1899" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576415668297" />
-    <state width="1899" height="277" key="GridCell.Tab.0.center" timestamp="1576577560895">
+    <state width="1899" height="277" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576946811762" />
+    <state width="1899" height="277" key="GridCell.Tab.0.left" timestamp="1576946811762">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="277" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1576577560895" />
-    <state width="1899" height="277" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576415668297" />
-    <state width="1899" height="277" key="GridCell.Tab.0.left" timestamp="1576577560895">
+    <state width="1899" height="277" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576946811762" />
+    <state width="1899" height="277" key="GridCell.Tab.0.right" timestamp="1576946811762">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="277" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1576577560895" />
-    <state width="1899" height="277" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576415668297" />
-    <state width="1899" height="277" key="GridCell.Tab.0.right" timestamp="1576577560895">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1576577560895" />
-    <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576415668297" />
+    <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576946811762" />
     <state x="461" y="167" key="SettingsEditor" timestamp="1576409357190">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576409357190" />
-    <state x="597" y="92" width="986" height="835" key="find.popup" timestamp="1576589880735">
+    <state x="647" y="266" width="626" height="528" key="find.popup" timestamp="1576947286483">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="597" y="92" width="986" height="835" key="find.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1576589880735" />
-    <state x="647" y="266" width="626" height="518" key="find.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576428354250" />
+    <state x="647" y="266" width="626" height="528" key="find.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576947286483" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1576422268849">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="600" height="440" key="javadoc.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576422268849" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1576503519686">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1576503519686" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1576423316734">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
