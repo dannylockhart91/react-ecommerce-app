@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sign-up/sign-up.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sign-up/sign-up.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/shop/shop.component.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +11,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="1TYcyt678iqJR32mQk55PcsYuby" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -28,6 +25,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ToolWindowVersion Control.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -38,14 +36,14 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="ts.external.directory.path" value="D:\Documents\Development\uDemy\React\ReactCourse\react-ecommerce-app\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\Documents\Development\uDemy\React\react-ecommerce-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Documents\Development\uDemy\React\ReactCourse\ecommerce-app\src\pages\homepage" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.start-server">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -69,8 +67,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start-server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start-server" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start-server" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -107,6 +116,9 @@
       <workItem from="1576407838196" duration="2588000" />
       <workItem from="1576410730164" duration="15897000" />
       <workItem from="1576942997402" duration="4477000" />
+      <workItem from="1577110062782" duration="436000" />
+      <workItem from="1577884929090" duration="328000" />
+      <workItem from="1578056932735" duration="193000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
@@ -248,30 +260,42 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="621" y="191" key="#ESLint/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576407969401" />
+    <state x="552" y="153" key="#JSON" timestamp="1578057130290">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="153" key="#JSON/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578057130290" />
     <state x="517" y="27" key="CommitChangelistDialog2" timestamp="1576422842547">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="517" y="27" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576422842547" />
-    <state width="1899" height="277" key="GridCell.Tab.0.bottom" timestamp="1576946811762">
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1578057248599">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576946811762" />
-    <state width="1899" height="277" key="GridCell.Tab.0.center" timestamp="1576946811762">
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578057248599" />
+    <state width="1899" height="277" key="GridCell.Tab.0.bottom" timestamp="1577027588813">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="277" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576946811762" />
-    <state width="1899" height="277" key="GridCell.Tab.0.left" timestamp="1576946811762">
+    <state width="1899" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
+    <state width="1899" height="277" key="GridCell.Tab.0.center" timestamp="1577027588813">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="277" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576946811762" />
-    <state width="1899" height="277" key="GridCell.Tab.0.right" timestamp="1576946811762">
+    <state width="1899" height="277" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
+    <state width="1899" height="277" key="GridCell.Tab.0.left" timestamp="1577027588813">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576946811762" />
+    <state width="1899" height="277" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
+    <state width="1899" height="277" key="GridCell.Tab.0.right" timestamp="1577027588813">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
     <state x="461" y="167" key="SettingsEditor" timestamp="1576409357190">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576409357190" />
+    <state x="713" y="178" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1577025134216">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="713" y="178" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577025134216" />
     <state x="647" y="266" width="626" height="528" key="find.popup" timestamp="1576947286483">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
