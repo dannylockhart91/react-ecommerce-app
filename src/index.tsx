@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import ScrollToTop from './utility/ScrollToTop/scrollToTop';
+import ScrollToTop from './utility/functions/scrollToTop';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
