@@ -1,18 +1,21 @@
 import React from 'react';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 
 import { Item } from '../../store/cart/cart.types';
 import CollectionItem from '../collection-item/collection-item.component';
 
 import { CollectionPreviewContainer } from './collection-preview.styles';
 
-interface CollectionPreviewProps {
+interface CollectionPreviewProps extends RouteComponentProps {
 	title: string;
 	items: Item[];
 }
 
-const CollectionPreview: React.FC<CollectionPreviewProps> = ({ title, items }) => (
+const CollectionPreview: React.FC<CollectionPreviewProps> = ({ title, items, history }) => (
 	<CollectionPreviewContainer className='collection-preview'>
-		<h1 className='title'>{title.toUpperCase()}</h1>
+		<h1 className='title' onClick={() => history.push(`/shop/${title.toLowerCase()}`)}>
+			{title.toUpperCase()}
+		</h1>
 		<div className='preview'>
 			{items
 				.filter((_item, index) => index < 4)
@@ -23,4 +26,4 @@ const CollectionPreview: React.FC<CollectionPreviewProps> = ({ title, items }) =
 	</CollectionPreviewContainer>
 );
 
-export default CollectionPreview;
+export default withRouter(CollectionPreview);
