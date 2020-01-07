@@ -13,6 +13,6 @@ export const CollectionPreviewContainer = styled.div`
 
 	.preview {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 `;

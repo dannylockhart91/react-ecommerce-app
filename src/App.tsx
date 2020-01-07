@@ -9,52 +9,53 @@ import { getCurrentUser } from './store/user/user.selectors';
 
 import Header from './components/header/header.component';
 
-import AuthenticationContainer from "./pages/authentication/authentication.container";
+import AuthenticationContainer from './pages/authentication/authentication.container';
 import HomePage from './pages/home/homepage.component';
 import ShopPage from './pages/shop/shop.component';
+import ContactPage from './pages/contact/contactpage.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 import './App.scss';
 
 interface AppProps extends AppSelectors {
-    checkIsUserAuthenticated: any;
+	checkIsUserAuthenticated: any;
 }
 
 const App: React.FC<AppProps> = ({ currentUser, checkIsUserAuthenticated }) => {
+	useEffect(() => {
+		checkIsUserAuthenticated();
+	}, [checkIsUserAuthenticated]);
 
-    useEffect(() => {
-        checkIsUserAuthenticated();
-    }, [checkIsUserAuthenticated]);
-
-    return (
-        <div>
-            <Header/>
-            <div className='page-container'>
-                <Switch>
-                    <Route exact path='/' component={HomePage}/>
-                    <Route path='/shop' component={ShopPage}/>
-                    <Route exact path='/checkout' component={CheckoutPage}/>
-                    <Route
-                        exact
-                        path='/auth'
-                        // @ts-ignore
-                        render={() => (currentUser ? <Redirect to={'/'}/> : <AuthenticationContainer/>)}
-                    />
-                </Switch>
-            </div>
-        </div>
-    );
+	return (
+		<div>
+			<Header />
+			<div className='page-container'>
+				<Switch>
+					<Route exact path='/' component={HomePage} />
+					<Route path='/shop' component={ShopPage} />
+					<Route path='/contact' component={ContactPage} />
+					<Route exact path='/checkout' component={CheckoutPage} />
+					<Route
+						exact
+						path='/auth'
+						// @ts-ignore
+						render={() => (currentUser ? <Redirect to={'/'} /> : <AuthenticationContainer />)}
+					/>
+				</Switch>
+			</div>
+		</div>
+	);
 };
 
 interface AppSelectors {
-    currentUser: any
+	currentUser: any;
 }
 
 const mapDispatchToProps = (dispatch: any) => ({
-    checkIsUserAuthenticated: () => dispatch(checkIsUserAuthenticated())
+	checkIsUserAuthenticated: () => dispatch(checkIsUserAuthenticated())
 });
 
 const mapStateToProps = createStructuredSelector<AppState, AppSelectors>({
-    currentUser: getCurrentUser,
+	currentUser: getCurrentUser
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

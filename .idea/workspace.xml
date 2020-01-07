@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form-input/form-input.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form-input/form-input.styles.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="react-ecommerce-app" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,7 +40,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="ts.external.directory.path" value="D:\Documents\Development\uDemy\React\react-ecommerce-app\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\Danny.Elliott\Desktop\Projects\Learning\react-ecommerce-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -79,8 +83,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start-server" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start-server" />
       </list>
     </recent_temporary>
   </component>
@@ -119,6 +123,8 @@
       <workItem from="1577110062782" duration="436000" />
       <workItem from="1577884929090" duration="328000" />
       <workItem from="1578056932735" duration="193000" />
+      <workItem from="1578298401438" duration="5804000" />
+      <workItem from="1578323137992" duration="2446000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
@@ -260,9 +266,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="621" y="191" key="#ESLint/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576407969401" />
-    <state x="552" y="153" key="#JSON" timestamp="1578057130290">
+    <state x="552" y="153" key="#JSON" timestamp="1578302714047">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="552" y="153" key="#JSON/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578302714047" />
     <state x="552" y="153" key="#JSON/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578057130290" />
     <state x="517" y="27" key="CommitChangelistDialog2" timestamp="1576422842547">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -272,21 +279,25 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578057248599" />
-    <state width="1899" height="277" key="GridCell.Tab.0.bottom" timestamp="1577027588813">
+    <state width="1899" height="277" key="GridCell.Tab.0.bottom" timestamp="1578382681569">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1899" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578382681569" />
     <state width="1899" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
-    <state width="1899" height="277" key="GridCell.Tab.0.center" timestamp="1577027588813">
+    <state width="1899" height="277" key="GridCell.Tab.0.center" timestamp="1578382681569">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1899" height="277" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578382681569" />
     <state width="1899" height="277" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
-    <state width="1899" height="277" key="GridCell.Tab.0.left" timestamp="1577027588813">
+    <state width="1899" height="277" key="GridCell.Tab.0.left" timestamp="1578382681569">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1899" height="277" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578382681569" />
     <state width="1899" height="277" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
-    <state width="1899" height="277" key="GridCell.Tab.0.right" timestamp="1577027588813">
+    <state width="1899" height="277" key="GridCell.Tab.0.right" timestamp="1578382681569">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578382681569" />
     <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
     <state x="461" y="167" key="SettingsEditor" timestamp="1576409357190">
       <screen x="0" y="0" width="1920" height="1050" />

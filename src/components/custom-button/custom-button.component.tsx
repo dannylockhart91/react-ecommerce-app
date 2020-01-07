@@ -10,7 +10,7 @@ export interface CustomButtonProps {
 }
 
 const CustomButton: React.FC<CustomButtonProps> = (props) => (
-	<CustomButtonContainer className={'custom-button'} {...props} onClick={props.handleClick}>
+	<CustomButtonContainer className={'custom-button'} onClick={props.handleClick} {...props}>
 		{props.children}
 	</CustomButtonContainer>
 );

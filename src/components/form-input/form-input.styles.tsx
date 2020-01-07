@@ -4,7 +4,7 @@ const subColor = 'grey';
 const mainColor = 'black';
 
 const shrinkLabel = () => {
-	return `
+    return `
 	top: -14px;
 	font-size: 12px;
 	color: ${mainColor};`;

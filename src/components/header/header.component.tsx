@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ currentUser, isHidden, signOut, history
         </LogoContainer>
         <HeaderLinks>
             <OptionLink to='/shop'>SHOP</OptionLink>
-            <OptionLink to='/shop'>CONTACT</OptionLink>
+            <OptionLink to='/contact'>CONTACT</OptionLink>
             {currentUser ? (
                 <OptionDiv onClick={() => {
                     signOut();

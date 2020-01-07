@@ -12,7 +12,7 @@ interface CollectionItemProps {
 	addItemToCart: any;
 }
 
-const CollectionItem: React.FC<CollectionItemProps> = ({ item, addItemToCart }) => {
+const CollectionItem: React.FC<CollectionItemProps> = ({ item, addItemToCart }: CollectionItemProps) => {
 	const { imageUrl, name, price } = item;
 	return (
 		<CollectionItemContainer className='collection-item'>
