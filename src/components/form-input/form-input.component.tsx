@@ -12,18 +12,18 @@ interface FormInputProps {
 	required: boolean;
 }
 
-const FormInput: React.FC<FormInputProps> = (props) => (
+const FormInput: React.FC<FormInputProps> = ({name, label, type, value, required, handleChange}: FormInputProps) => (
 	<FormInputContainer className='group'>
 		<input
 			className='form-input'
-			name={props.name}
-			type={props.type}
-			value={props.value}
-			onChange={props.handleChange}
-			required={props.required}
+			name={name}
+			type={type}
+			value={value}
+			onChange={handleChange}
+			required={required}
 		/>
-		{props.label ? (
-			<label className={`${props.value.length ? 'shrink' : ''} form-input-label`}>{props.label}</label>
+		{label ? (
+			<label className={`${value.length ? 'shrink' : ''} form-input-label`}>{label}</label>
 		) : null}
 	</FormInputContainer>
 );

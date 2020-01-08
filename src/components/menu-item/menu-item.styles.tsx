@@ -12,7 +12,7 @@ export const MenuItemContainer = styled.div`
 	overflow: hidden;
 
 	&.large {
-		height: 380px;
+        height: 380px;
 	}
 
 	&:hover {
@@ -57,10 +57,14 @@ export const MenuItemContainer = styled.div`
 		.subtitle {
 			font-weight: lighter;
 			font-size: 1rem;
-		}
+        }
+        @media screen and (max-width: 700px) {
+            padding: 0 12px;
+        }
 	}
 
 	@media (max-width: 599px) {
-		min-width: 190px;
+        min-width: 190px;
+        max-height: 240px;
 	}
 `;

@@ -12,7 +12,7 @@ interface SignInProps {
     emailSignIn: any
 }
 
-const SignInComponent: React.FC<SignInProps> = ({ emailSignIn, googleSignIn }) => {
+const SignInComponent: React.FC<SignInProps> = ({ emailSignIn, googleSignIn }: SignInProps) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 

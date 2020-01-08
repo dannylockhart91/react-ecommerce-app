@@ -14,7 +14,7 @@ import HomePage from './pages/home/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import ContactPage from './pages/contact/contactpage.component';
 import CheckoutPage from './pages/checkout/checkout.component';
-import './App.scss';
+import { GlobalStyles } from './global.styles';
 
 interface AppProps extends AppSelectors {
 	checkIsUserAuthenticated: any;
@@ -27,6 +27,7 @@ const App: React.FC<AppProps> = ({ currentUser, checkIsUserAuthenticated }) => {
 
 	return (
 		<div>
+            <GlobalStyles />
 			<Header />
 			<div className='page-container'>
 				<Switch>

@@ -4,9 +4,7 @@ import { connect } from 'react-redux';
 import { Item } from '../../store/cart/cart.types';
 import { addItemToCart } from '../../store/cart/cart-actions';
 
-import CustomButton from '../custom-button/custom-button.component';
-
-import { CollectionItemContainer } from './collection-item.styles';
+import { CollectionItemContainer, AddButton } from './collection-item.styles';
 interface CollectionItemProps {
 	item: Item;
 	addItemToCart: any;
@@ -26,9 +24,9 @@ const CollectionItem: React.FC<CollectionItemProps> = ({ item, addItemToCart }: 
 				<span className='name'>{name}</span>
 				<span className='price'>£{price}</span>
 			</div>
-			<CustomButton inverted handleClick={() => addItemToCart(item)}>
-				ADD TO CART
-			</CustomButton>
+            <AddButton inverted handleClick={() => addItemToCart(item)}>
+                ADD TO CART
+            </AddButton>
 		</CollectionItemContainer>
 	);
 };

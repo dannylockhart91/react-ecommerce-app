@@ -7,22 +7,35 @@ export const HeaderContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 25px;
-	box-shadow: -10px 0 10px 5px #444;
+    box-shadow: -10px 0 10px 5px #444;
+    
+    @media screen and (max-width: 800px) {
+        height: 60px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
 `;
 
 export const LogoContainer = styled(Link)`
 	display: flex;
 	align-items: center;
-	padding-left: 1rem;
+    padding-left: 1rem;
+    
+    @media screen and (max-width: 800px) {
+        padding: 0;
+    }
 `;
 
 export const HeaderLinks = styled.div`
 	width: 50%;
-	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	padding-right: 1rem;
+    padding-right: 1rem;
+    
+    @media screen and (max-width: 800px) {
+        width: 80%;
+    }
 `;
 
 export const OptionLink = styled(Link)`

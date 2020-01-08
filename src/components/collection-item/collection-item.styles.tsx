@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import CustomButton from '../custom-button/custom-button.component';
 
 export const CollectionItemContainer = styled.div`
 	position: relative;
-    width: 22vw;
-    max-width: 266px;
+	width: 22vw;
+	max-width: 266px;
 	display: flex;
 	flex-direction: column;
 	height: 350px;
@@ -28,20 +29,35 @@ export const CollectionItemContainer = styled.div`
 	&:hover {
 		background-color: white;
 		opacity: 0.9;
-		.custom-button {
-			display: flex;
-		}
+
+        button {
+            opacity: 0.85;
+            display: flex;
+        }
 	}
 
-	.custom-button {
-		position: absolute;
-		width: 80%;
-		bottom: 50px;
-		opacity: 0.7;
-		display: none;
-
-		&:hover {
-			opacity: 0.9;
-		}
+	@media (max-width: 800px) {
+		width: 40vw;
+		min-width: 160px;
+		margin: 0 auto;
 	}
+`;
+
+export const AddButton = styled(CustomButton)`
+	position: absolute;
+	width: 80%;
+	bottom: 50px;
+	opacity: 0.7;
+	display: none;
+
+	&:hover {
+		opacity: 0.9;
+	}
+
+    @media screen and (max-width: 800px) {
+        display: block;
+        opacity: 0.9;
+        min-width: unset;
+        padding: 0 10px;
+    }
 `;
