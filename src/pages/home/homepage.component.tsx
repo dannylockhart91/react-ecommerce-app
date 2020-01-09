@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 import DirectoryComponent from '../../components/directory/directory.component';
 
 import { HomePageContainer } from './homepage.styles';
 
 const HomePage: React.FC = () => (
 	<HomePageContainer>
-		<DirectoryComponent />
+		<Profiler
+			id='DirectoryProfiler'
+			onRender={(id, phase, actualDuration) => {
+				console.log({ id, phase, actualDuration });
+			}}>
+			<DirectoryComponent />
+		</Profiler>
 	</HomePageContainer>
 );
 
