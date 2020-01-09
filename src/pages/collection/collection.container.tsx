@@ -18,6 +18,6 @@ const mapStateToProps = createStructuredSelector<null, CollectionSelectors>({
 const CollectionPageContainer = compose(
     connect(mapStateToProps),
     hocSpinner
-)(CollectionPage);
+)(CollectionPage) as React.ComponentType<any>;
 
 export default CollectionPageContainer;

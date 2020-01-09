@@ -8,7 +8,7 @@ import { ShopData } from '../../store/shop/shop.types';
 
 import CollectionItem from '../../components/collection-item/collection-item.component';
 
-import { CollectionContainer } from './collection.styles';
+import { CollectionStyleContainer } from './collection.styles';
 
 interface CollectionPageProps extends RouteComponentProps {
     collection: ShopData | null;
@@ -22,14 +22,14 @@ const CollectionPage: React.FC<CollectionPageProps> = ({ collection }) => {
         items = collection.items;
     }
     return (
-        <CollectionContainer className='collection-page-container'>
+        <CollectionStyleContainer className='collection-page-container'>
             <h2 className='title'>{title}</h2>
             <div className='items'>
                 {items.map((item: any) => (
                     <CollectionItem key={item.id} item={item}/>
                 ))}
             </div>
-        </CollectionContainer>
+        </CollectionStyleContainer>
     );
 };
 

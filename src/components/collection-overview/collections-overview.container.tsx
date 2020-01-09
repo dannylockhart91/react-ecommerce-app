@@ -18,7 +18,7 @@ const mapStateToProps = createStructuredSelector<AppState, CollectionOverviewSel
 const CollectionsOverviewContainer = compose(
     connect(mapStateToProps),
     hocSpinner
-)(CollectionOverview);
+)(CollectionOverview) as React.ComponentType<any>;
 
 export default CollectionsOverviewContainer;
 
