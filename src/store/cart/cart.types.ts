@@ -16,7 +16,9 @@ export enum CartActions {
     ADD_ITEM_TO_CART = 'ADD_ITEM_TO_CART',
     REMOVE_ITEM_FROM_CART = 'REMOVE_ITEM_FROM_CART',
     CLEAR_ITEM_FROM_CART = 'CLEAR_ITEM_FROM_CART',
-    CLEAR_CART = '[Cart] Clear cart'
+    CLEAR_CART = '[Cart] Clear cart',
+    SET_CART_FROM_FIREBASE = '[Cart] Set cart from firebase',
+    UPDATE_CART_IN_FIREBASE = '[Card] Update cart in firebase'
 }
 
 interface ToggleShowCart {
@@ -42,9 +44,20 @@ interface ClearCart {
     type: typeof CartActions.CLEAR_CART
 }
 
+interface SetCartFromFirebase {
+    type: typeof CartActions.SET_CART_FROM_FIREBASE,
+    payload: Item[]
+}
+
+interface UpdateCartInFirebase {
+    type: typeof CartActions.UPDATE_CART_IN_FIREBASE
+}
+
 export type CartActionTypes =
     ToggleShowCart |
     AddItemToCart |
     RemoveItemFromCart |
     ClearItemFromCart |
-    ClearCart;
+    ClearCart |
+    SetCartFromFirebase |
+    UpdateCartInFirebase;

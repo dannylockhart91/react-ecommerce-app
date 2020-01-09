@@ -69,6 +69,24 @@ export const getCurrentUser = () => {
 };
 
 /**
+ * Utility function to either retrieve the current users cart items that have been
+ * stored in the database or create a new document that stores them
+ * @param userId {string} The user in which to query for the cart items
+ */
+export const getUserCartRef = async (userId: any) => {
+    const cartsRef = firestore.collection('carts').where('userId', '==', userId);
+    const snapshot = await cartsRef.get();
+
+    if (snapshot.empty) {
+        const cartDocRef = firestore.collection('carts').doc();
+        await cartDocRef.set({ userId, cartItems: [] });
+        return cartDocRef;
+    } else {
+        return snapshot.docs[0].ref;
+    }
+};
+
+/**
  * Utility function to transform the data currently stored in the firebase database to a usable
  * format for the application
  * @param collections {firebase.firestore.QuerySnapshot} The snapshot from the firestore database

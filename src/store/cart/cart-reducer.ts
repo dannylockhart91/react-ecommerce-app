@@ -1,13 +1,20 @@
+import {UserActionTypes} from '../user/user.types';
 import { CartActions, CartActionTypes, CartState, Item } from "./cart.types";
 import { addItemToCartItems, removeItemFromCartItems } from './cart.utils';
+import { UserActions } from "../user/user.types";
 
 const initialState: CartState = {
     isHidden: true,
     cartItems: []
 };
 
-const cartReducer = (state: CartState = initialState, action: CartActionTypes) => {
+const cartReducer = (state: CartState = initialState, action: CartActionTypes | UserActionTypes) => {
     switch (action.type) {
+        case UserActions.SIGN_OUT_SUCCESS:
+            return {
+                ...state,
+                isHidden: true
+            };
         case CartActions.TOGGLE_SHOW_CART:
             return {
                 ...state,
@@ -32,6 +39,11 @@ const cartReducer = (state: CartState = initialState, action: CartActionTypes) =
             return {
                 ...state,
                 cartItems: []
+            };
+        case CartActions.SET_CART_FROM_FIREBASE:
+            return {
+                ...state,
+                cartItems: action.payload
             };
         default:
             return state;
