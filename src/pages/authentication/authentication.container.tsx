@@ -18,6 +18,6 @@ const mapStateToProps = createStructuredSelector<AppState, AuthenticationSelecto
 const AuthenticationContainer = compose(
     connect(mapStateToProps),
     hocSpinner
-)(Authentication);
+)(Authentication) as React.ComponentType<any>;
 
 export default AuthenticationContainer;

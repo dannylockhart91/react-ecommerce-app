@@ -9,6 +9,7 @@ import { getCurrentUser } from './store/user/user.selectors';
 
 import Header from './components/header/header.component';
 import Spinner from './components/spinner/spinner.component';
+import ErrorBoundary from './components/error-boundry/error-boundry.component';
 import { GlobalStyles } from './global.styles';
 
 // import ShopPage from './pages/shop/shop.component';
@@ -34,20 +35,22 @@ const App: React.FC<AppProps> = ({ currentUser, checkIsUserAuthenticated }) => {
 			<GlobalStyles />
 			<Header />
 			<div className='page-container'>
-				<Suspense fallback={<Spinner />}>
-					<Switch>
-						<Route exact path='/' component={HomePage} />
-						<Route path='/shop' component={ShopPage} />
-						<Route path='/contact' component={ContactPage} />
-						<Route exact path='/checkout' component={CheckoutPage} />
-						<Route
-							exact
-							path='/auth'
-							// @ts-ignore
-							render={() => (currentUser ? <Redirect to={'/'} /> : <AuthenticationContainer />)}
-						/>
-					</Switch>
-				</Suspense>
+				<ErrorBoundary>
+					<Suspense fallback={<Spinner />}>
+						<Switch>
+							<Route exact path='/' component={HomePage} />
+							<Route path='/shop' component={ShopPage} />
+							<Route path='/contact' component={ContactPage} />
+							<Route exact path='/checkout' component={CheckoutPage} />
+							<Route
+								exact
+								path='/auth'
+								// @ts-ignore
+								render={() => (currentUser ? <Redirect to={'/'} /> : <AuthenticationContainer />)}
+							/>
+						</Switch>
+					</Suspense>
+				</ErrorBoundary>
 			</div>
 		</div>
 	);
