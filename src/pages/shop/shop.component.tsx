@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import { FetchCollections } from '../../store/shop/shop.actions';
 import Spinner from '../../components/spinner/spinner.component';
+import ErrorBoundary from '../../components/error-boundry/error-boundry.component';
 
 const CollectionsOverviewContainer = lazy(() =>
 	import('../../components/collection-overview/collections-overview.container')
@@ -23,17 +24,21 @@ const ShopPage: React.FC<ShopPageProps> = ({ fetchCollections, match }) => {
 	return (
 		<div className='shop-page'>
 			<Suspense fallback={<Spinner />}>
-				<Route
-					exact
-					path={`${match.path}`}
-					// @ts-ignore
-					component={CollectionsOverviewContainer}
-				/>
-				<Route
-					path={`${match.path}/:collectionId`}
-					// @ts-ignore
-					component={CollectionPageContainer}
-				/>
+				<ErrorBoundary>
+					<Route
+						exact
+						path={`${match.path}`}
+						// @ts-ignore
+						component={CollectionsOverviewContainer}
+					/>
+				</ErrorBoundary>
+				<ErrorBoundary>
+					<Route
+						path={`${match.path}/:collectionId`}
+						// @ts-ignore
+						component={CollectionPageContainer}
+					/>
+				</ErrorBoundary>
 			</Suspense>
 		</div>
 	);

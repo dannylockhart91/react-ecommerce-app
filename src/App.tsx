@@ -48,6 +48,7 @@ const App: React.FC<AppProps> = ({ currentUser, checkIsUserAuthenticated }) => {
 								// @ts-ignore
 								render={() => (currentUser ? <Redirect to={'/'} /> : <AuthenticationContainer />)}
 							/>
+                            <Redirect from={'*'} to={'/'}/>
 						</Switch>
 					</Suspense>
 				</ErrorBoundary>
