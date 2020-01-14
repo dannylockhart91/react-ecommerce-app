@@ -47,7 +47,7 @@ const SignInComponent: React.FC<SignInProps> = ({ emailSignIn, googleSignIn }: S
                 />
                 <div className='button-container'>
                     <CustomButton buttonType={'submit'}>Sign In</CustomButton>
-                    <CustomButton buttonType={'button'} googleSignIn={true} handleClick={googleSignIn}>
+                    <CustomButton buttonType={'button'} googleSignIn handleClick={googleSignIn}>
                         Sign in with Google
                     </CustomButton>
                 </div>

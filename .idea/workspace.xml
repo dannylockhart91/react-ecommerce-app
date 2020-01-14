@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/collection-preview/collection-preview.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-preview/collection-preview.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form-input/form-input.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form-input/form-input.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,15 +40,15 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="ts.external.directory.path" value="C:\Users\Danny.Elliott\Desktop\Projects\Learning\react-ecommerce-app\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Users\Danny.Elliott\Desktop\Projects\Learning\React\react-ecommerce-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Documents\Development\uDemy\React\ReactCourse\ecommerce-app\src\pages\homepage" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start-server">
+  <component name="RunManager" selected="JavaScript Debug.Debug Application">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -62,30 +62,13 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="npm start" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start-server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start-server" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="npm.dev" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.start-server" />
       </list>
     </recent_temporary>
   </component>
@@ -127,6 +110,9 @@
       <workItem from="1578298401438" duration="5804000" />
       <workItem from="1578323137992" duration="2446000" />
       <workItem from="1578491163186" duration="1000" />
+      <workItem from="1578902489411" duration="160000" />
+      <workItem from="1578906339296" duration="137000" />
+      <workItem from="1578906487421" duration="1997000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
@@ -235,6 +221,31 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/Danny.Elliott/Desktop/Projects/Learning/React/react-ecommerce-app/.vscode" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -243,6 +254,11 @@
           </value>
         </entry>
       </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
@@ -273,13 +289,18 @@
     </state>
     <state x="552" y="153" key="#JSON/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578302714047" />
     <state x="552" y="153" key="#JSON/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578057130290" />
+    <state x="414" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578906365251">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578906365251" />
     <state x="517" y="27" key="CommitChangelistDialog2" timestamp="1576422842547">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="517" y="27" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576422842547" />
-    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1578057248599">
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1578986126177">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578986126177" />
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578057248599" />
     <state width="1899" height="277" key="GridCell.Tab.0.bottom" timestamp="1578382681569">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -301,9 +322,10 @@
     </state>
     <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578382681569" />
     <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
-    <state x="461" y="167" key="SettingsEditor" timestamp="1576409357190">
+    <state x="801" y="144" key="SettingsEditor" timestamp="1578906475151">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="801" y="144" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578906475151" />
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576409357190" />
     <state x="713" y="178" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1577025134216">
       <screen x="0" y="0" width="1920" height="1050" />
