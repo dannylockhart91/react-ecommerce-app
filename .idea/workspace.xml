@@ -38,7 +38,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="ts.external.directory.path" value="C:\Users\Danny.Elliott\Desktop\Projects\Learning\React\react-ecommerce-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -111,6 +111,7 @@
       <workItem from="1578902489411" duration="160000" />
       <workItem from="1578906339296" duration="137000" />
       <workItem from="1578906487421" duration="2607000" />
+      <workItem from="1578989686515" duration="996000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
@@ -324,10 +325,10 @@
     </state>
     <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578382681569" />
     <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
-    <state x="801" y="144" key="SettingsEditor" timestamp="1578906475151">
+    <state x="801" y="144" key="SettingsEditor" timestamp="1578989728733">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="801" y="144" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578906475151" />
+    <state x="801" y="144" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578989728733" />
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576409357190" />
     <state x="713" y="178" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1577025134216">
       <screen x="0" y="0" width="1920" height="1050" />
