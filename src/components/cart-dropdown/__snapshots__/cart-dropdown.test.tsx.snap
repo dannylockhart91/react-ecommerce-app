@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartDropdown component render CartDropdown component 1`] = `
+<styled.div
+  className="cart-dropdown"
+>
+  <div
+    className="cart-items"
+    id="cart-items"
+  >
+    <span
+      className="empty-message"
+    >
+      Your cart is empty
+    </span>
+  </div>
+  <CustomButton
+    handleClick={[Function]}
+  >
+    GO TO CHECKOUT
+  </CustomButton>
+</styled.div>
+`;
