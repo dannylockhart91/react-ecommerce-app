@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
+    * {
+        box-sizing: border-box;
+    }
+    *:before, *:after {
+        box-sizing: inherit;
+    }
     body {
         font-family: 'Open Sans Condensed', 'Roboto', serif;
         height: 100vh;

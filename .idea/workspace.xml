@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fb0c801-d6f6-41c9-b884-b35d448e952e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/cart-dropdown/__snapshots__/cart-dropdown.test.tsx.snap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cart-dropdown/cart-dropdown.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cart-dropdown/cart-dropdown.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart-dropdown/cart-dropdown.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/collection-overview/collection-overview.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-overview/collection-overview.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/collection/collection.container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/collection/collection.container.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/collection/collection.styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/collection/collection.styles.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,13 +69,25 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="npm.dev" />
+      <item itemvalue="npm.start" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +135,8 @@
       <workItem from="1578989686515" duration="996000" />
       <workItem from="1579523707988" duration="507000" />
       <workItem from="1579525984061" duration="1617000" />
-      <workItem from="1579595195668" duration="10742000" />
+      <workItem from="1579595195668" duration="10951000" />
+      <workItem from="1583924604550" duration="470000" />
     </task>
     <task id="LOCAL-00001" summary="- Added initial styling&#10;- Added node-sass for scss stying&#10;- Added starting home-page structure">
       <created>1573642230428</created>
@@ -236,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578986219299</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="- Added jest configuration in package.json&#10;- installed enzyme / enzyme-adapter-react-16 / enzyme-to-json&#10;- Added in some testing">
+      <created>1579608813138</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1579608813138</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +311,8 @@
     <MESSAGE value="- Created HOC spinner&#10;- Implemented Container pattern on Collection and CollectionOverview&#10;- Implemented ASYNC api request 'FetchCollectionsAsync'" />
     <MESSAGE value="- Implemented Redux-Saga start&#10;- FetchCollection now utilises a saga side effect to handle fetching the data and then calling 'put()' ti dispatch actions&#10;- Removed redux-thunk" />
     <MESSAGE value="- Removed unused dependencies and getting ready to add Express server" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Removed unused dependencies and getting ready to add Express server" />
+    <MESSAGE value="- Added jest configuration in package.json&#10;- installed enzyme / enzyme-adapter-react-16 / enzyme-to-json&#10;- Added in some testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added jest configuration in package.json&#10;- installed enzyme / enzyme-adapter-react-16 / enzyme-to-json&#10;- Added in some testing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="621" y="191" key="#ESLint" timestamp="1576407969401">
@@ -313,35 +328,35 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578906365251" />
-    <state x="517" y="27" key="CommitChangelistDialog2" timestamp="1578986218368">
+    <state x="517" y="27" key="CommitChangelistDialog2" timestamp="1579608812186">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="517" y="27" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578986218368" />
+    <state x="517" y="27" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579608812186" />
     <state x="517" y="27" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1576422842547" />
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1578986395179">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1578986395179" />
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1578057248599" />
-    <state width="1899" height="277" key="GridCell.Tab.0.bottom" timestamp="1579596009163">
+    <state width="1899" height="277" key="GridCell.Tab.0.bottom" timestamp="1583924779932">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579596009163" />
+    <state width="1899" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1583924779932" />
     <state width="1899" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
-    <state width="1899" height="277" key="GridCell.Tab.0.center" timestamp="1579596009163">
+    <state width="1899" height="277" key="GridCell.Tab.0.center" timestamp="1583924779932">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="277" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579596009163" />
+    <state width="1899" height="277" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1583924779932" />
     <state width="1899" height="277" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
-    <state width="1899" height="277" key="GridCell.Tab.0.left" timestamp="1579596009163">
+    <state width="1899" height="277" key="GridCell.Tab.0.left" timestamp="1583924779932">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="277" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579596009163" />
+    <state width="1899" height="277" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1583924779932" />
     <state width="1899" height="277" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
-    <state width="1899" height="277" key="GridCell.Tab.0.right" timestamp="1579596009163">
+    <state width="1899" height="277" key="GridCell.Tab.0.right" timestamp="1583924779932">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579596009163" />
+    <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1583924779932" />
     <state width="1899" height="277" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1577027588813" />
     <state x="666" y="152" key="RollbackChangesDialog" timestamp="1579604380851">
       <screen x="0" y="0" width="1920" height="1050" />
